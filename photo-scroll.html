@@ -11,7 +11,7 @@
 <style>
 /* ===== HORIZONTAL SCROLL GALLERY STYLES ===== */
 .horizontal-gallery-section {
-  background: var(--bg-dark, #0a0f14);
+  background: #ffffff;  /* Changed from dark to white */
   padding: 4rem 0;
   overflow-x: hidden;
 }
@@ -31,7 +31,7 @@
 }
 
 .gallery-header .section-title {
-  color: #fff;
+  color: #1a1a1a;  /* Changed from white to dark */
   font-size: 2.2rem;
   font-weight: 600;
   font-family: 'Cormorant Garamond', serif;
@@ -45,6 +45,10 @@
   margin-bottom: 1rem;
 }
 
+.gallery-header p {
+  color: #555;  /* Changed from #aaa to darker gray for contrast */
+}
+
 .gallery-scroll-container {
   display: flex;
   overflow-x: auto;
@@ -53,7 +57,7 @@
   padding: 1rem 0 2rem 0;
   cursor: grab;
   scrollbar-width: thin;
-  scrollbar-color: var(--gold, #c8a86b) #2a2a2a;
+  scrollbar-color: var(--gold, #c8a86b) #e0e0e0;  /* Lighter track color */
 }
 
 .gallery-scroll-container::-webkit-scrollbar {
@@ -61,7 +65,7 @@
 }
 
 .gallery-scroll-container::-webkit-scrollbar-track {
-  background: #2a2a2a;
+  background: #e0e0e0;  /* Light gray track */
   border-radius: 10px;
 }
 
@@ -77,12 +81,12 @@
   overflow: hidden;
   position: relative;
   transition: all 0.4s ease;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);  /* Softer shadow for white bg */
 }
 
 .gallery-item:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.2);
 }
 
 .gallery-item img {
@@ -114,7 +118,7 @@
   text-align: center;
   margin-top: 1rem;
   font-size: 0.8rem;
-  color: #aaa;
+  color: #777;  /* Darker for white bg */
   letter-spacing: 1px;
 }
 
