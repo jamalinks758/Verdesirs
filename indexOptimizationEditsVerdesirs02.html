@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Construction Company Gros Islet | Verdesirs Consulting Inc</title>
+<meta name="description" content="Professional construction company in Gros Islet offering full construction, renovations, and project management services across Gros Islet, Micoud, and Vieux-Fort. Get a quote today.">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+  <!-- ============================
+     FAQ SCHEMA — JSON-LD
+     ============================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you offer construction services in Gros Islet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — we are based in Gros Islet and serve clients across Saint Lucia, including Micoud, Vieux-Fort, Castries, Soufrière, and surrounding communities. Whether your project is in the north or south of the island, our team can accommodate you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does construction cost in Gros Islet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Construction costs in Gros Islet and across Saint Lucia vary depending on the size of the project, materials selected, site conditions, and scope of work. A residential build will be priced differently from a commercial renovation or a simple upgrade. We provide detailed, transparent quotes — contact us on WhatsApp and we'll assess your specific needs at no obligation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of construction services do you offer to residents of Gros Islet and the surrounding communities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Verdesirs Consulting Inc. offers full residential construction, commercial construction, renovations and upgrades, and end-to-end project management. Whether you're building from the ground up or modernizing an existing space, we handle all phases from foundation to finishing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get a quote from Verdesirs Consulting Inc.?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The fastest way is to message us directly on WhatsApp at +1 (758) 715-1506. Share a brief description of your project and we'll follow up quickly with questions and an estimate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a construction project take in Saint Lucia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Project timelines depend on the complexity and scale of the work. A renovation may take a few weeks, while a full residential build typically spans several months. We provide a clear project schedule at the start and keep you updated throughout every phase to ensure on-time delivery."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle building permits and planning approvals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We can guide you through the permitting and planning approval process in Saint Lucia. As your construction partner, we help ensure your project meets the requirements set by the relevant local authorities before work begins."
+      }
+     },
+    {
+      "@type": "Question",
+      "name": "Do you handle renovation projects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer complete renovation and upgrade services for homes across Gros Islet and surrounding areas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you manage my project if I am overseas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We work with diaspora clients and overseas property owners regularly. Through our project management service, we oversee everything on the ground and provide regular updates via WhatsApp and photos, so you remain fully informed regardless of where you are."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why should I choose Verdesirs Consulting Inc. for my project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We are a Saint Lucia-rooted company with hands-on experience across residential and commercial projects island-wide. We offer transparent pricing, reliable communication, and a dedicated team committed to quality at every stage."
+      }
+    }
+  ]
+}
+</script>
+  
+<style>
+/* ===== HORIZONTAL SCROLL GALLERY STYLES ===== */
+.horizontal-gallery-section {
+  background: #ffffff;  /* Changed from dark to white */
+  padding: 4rem 0;
+  overflow-x: hidden;
+}
+
+.gallery-header {
+  margin-bottom: 2.5rem;
+}
+
+.gallery-header .section-eyebrow {
+  color: var(--gold, #c8a86b);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-header .section-title {
+  color: #1a1a1a;  /* Changed from white to dark */
+  font-size: 2.2rem;
+  font-weight: 600;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.gallery-header .title-underline {
+  width: 70px;
+  height: 3px;
+  background: var(--gold, #c8a86b);
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.gallery-header p {
+  color: #555;  /* Changed from #aaa to darker gray for contrast */
+}
+
+.gallery-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1.5rem;
+  padding: 1rem 0 2rem 0;
+  cursor: grab;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold, #c8a86b) #e0e0e0;  /* Lighter track color */
+}
+
+.gallery-scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.gallery-scroll-container::-webkit-scrollbar-track {
+  background: #e0e0e0;  /* Light gray track */
+  border-radius: 10px;
+}
+
+.gallery-scroll-container::-webkit-scrollbar-thumb {
+  background: var(--gold, #c8a86b);
+  border-radius: 10px;
+}
+
+.gallery-item {
+  flex: 0 0 auto;
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);  /* Softer shadow for white bg */
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+  padding: 1.5rem 1rem 0.8rem;
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.scroll-hint {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #777;  /* Darker for white bg */
+  letter-spacing: 1px;
+}
+
+.scroll-hint i {
+  color: var(--gold, #c8a86b);
+  margin-right: 6px;
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    width: 260px;
+  }
+  .gallery-item img {
+    height: 320px;
+  }
+  .gallery-header .section-title {
+    font-size: 1.8rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============================
+     NAVBAR
+     ============================ -->
+<nav id="mainNav" class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <div class="nav-logo-circle">
+        <img src="images/verdesirs-logo-hd.webp" class="mx-auto img-fluid object-fit-cover rounded-pill" loading="lazy" alt="Verdesirs Logo">
+      </div>
+      <div>
+        <span class="brand-text-top">VERDESIRS</span>
+        <span class="brand-text-sub">Consulting Inc.</span>
+      </div>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center gap-1">
+        <li class="nav-item"><a class="nav-link" href="#our-work">Our Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item ms-2">
+          <a class="nav-link nav-cta" href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20quote%3F" target="_blank">
+            <i class="fab fa-whatsapp me-1"></i> Get a Quote
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================
+     HERO
+     ============================ -->
+<section id="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-accent-line"></div>
+
+  <div class="container hero-content">
+    <div class="row">
+      <div class="col-lg-8">
+        <span class="hero-tag">Based In Gros Islet - Serving all of Saint Lucia</span>
+        <h1 class="hero-title">
+          Building Homes St. Lucians <em>Can Be Proud Of  </em>      
+        </h1>
+        <p class="hero-sub">
+Verdesirs Consulting Inc. has been delivering quality residential 
+construction, renovations, and full project management across Saint Lucia 
+for 6 years — with a <em>limited-time</em> free site visit offer, a written quote before any work 
+begins, and a team that shows up every time.
+</p>
+
+        
+        <p class="hero-services-line">First Home Builds &nbsp;•&nbsp; Renovations & Upgrades &nbsp;•&nbsp; Overseas Project Management</p>
+        <div class="hero-btns">
+          <a href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20quote%3F" class="btn-wa" target="_blank">
+            <i class="fab fa-whatsapp"></i> Get a Free Quote on WhatsApp
+          </a>
+          <a href="#our-work" class="btn-ghost">View Our Work</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-indicator">
+    <span class="scroll-text">Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ============================
+     TRUST BAR
+     ============================ -->
+<section id="trust-bar">
+  <div class="container">
+    <div class="row g-0 text-center text-lg-start">
+      <div class="col-6 col-lg-3">
+        <div class="trust-item justify-content-center justify-content-lg-start">
+          <div class="trust-icon"><i class="fas fa-hard-hat"></i></div>
+          <span class="trust-label">Experienced Team</span>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="trust-item justify-content-center justify-content-lg-start">
+          <div class="trust-icon"><i class="fas fa-award"></i></div>
+          <span class="trust-label">Quality Workmanship</span>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="trust-item justify-content-center justify-content-lg-start">
+          <div class="trust-icon"><i class="fas fa-clock"></i></div>
+          <span class="trust-label">On-Time Completion</span>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="trust-item justify-content-center justify-content-lg-start">
+          <div class="trust-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <span class="trust-label">Trusted Across St. Lucia</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     OUR WORK
+     ============================ -->
+<section id="our-work">
+  <div class="container">
+    <div class="row align-items-end mb-2">
+      <div class="col-lg-6 reveal">
+        <span class="section-eyebrow">Portfolio</span>
+        <h2 class="section-title">Our Work</h2>
+        <div class="title-underline"></div>
+        <p style="color:var(--text-mid);font-size:.95rem;line-height:1.8;">Real projects completed for clients across Saint Lucia.</p>
+      </div>
+      <div class="col-lg-6 reveal reveal-delay-1 text-lg-end">
+        <p class="projects-intro">See the quality of our construction and renovation projects</p>
+      </div>
+    </div>
+
+    <div class="project-grid reveal reveal-delay-2">
+      <div class="project-card tall">
+        <img src="images/modern-house-project-in-the-making.webp" class="img-fluid mx-auto object-fit-cover" alt="house construction Gros Islet" loading="lazy">
+        <div class="project-overlay">
+          <div>
+            <div class="project-label">Residential Build</div>
+            <span class="project-sublabel">Saint Lucia</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images/almost-completed-teal-house.webp" class="mx-auto img-fluid object-fit-cover" alt="Residential Project in Gros Islet" loading="lazy">
+        <div class="project-overlay">
+          <div>
+            <div class="project-label">Residential Build</div>
+            <span class="project-sublabel">Saint Lucia</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images/almost-completed-house.webp" class="mx-auto img-fluid object-fit-cover" alt="Almost Completed Project in Gros Islet" loading="lazy">
+        <div class="project-overlay">
+          <div>
+            <div class="project-label">Renovation</div>
+            <span class="project-sublabel">Saint Lucia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     NEW HORIZONTAL SCROLL GALLERY
+     ============================ -->
+<section class="horizontal-gallery-section">
+  <div class="container">
+    <div class="gallery-header reveal">
+      <span class="section-eyebrow">Project Gallery</span>
+      <h2 class="section-title">Browse Our Recent Work</h2>
+      <div class="title-underline"></div>
+      <p style="color: #aaa; font-size: 0.95rem;">Swipe or scroll horizontally to explore more projects by our Construction Company in Gros Islet</p>
+    </div>
+
+    <div class="gallery-scroll-container reveal reveal-delay-1" id="horizontalScrollGallery">
+      <!-- Gallery Item 1 -->
+      <div class="gallery-item">
+        <img src="images/first-floor-plus-top.webp" class="mx-auto img-fluid object-fit-cover" alt="First floor of house being built by our construction company in Gros Islet" loading="lazy">
+        <div class="gallery-caption"></div>
+      </div>
+      <!-- Gallery Item 2 -->
+      <div class="gallery-item">
+        <img src="images/use-of-crane-for-building.webp" class="mx-auto img-fluid object-fit-cover" alt="A crane being used on the roof of one of our construction sites in Gros Islet" loading="lazy">
+        <div class="gallery-caption"></div>
+      </div>
+      <!-- Gallery Item 3 -->
+      <div class="gallery-item">
+        <img src="images/roof-works.webp" class="mx-auto img-fluid object-fit-cover" alt="Men at work employed by our construction company in Gros Islet on the roof on a house " loading="lazy">
+        <div class="gallery-caption"></div>
+      </div>
+      <!-- Gallery Item 4 (Additional image - reuse existing or add new) -->
+      <div class="gallery-item">
+        <img src="images/full-house-frame.webp" class="mx-auto img-fluid object-fit-cover" alt="Commercial Project undertaken by our construction company in Gros Islet" loading="lazy">
+        <div class="gallery-caption"></div>
+      </div>
+      <!-- Gallery Item 5 -->
+      <div class="gallery-item">
+        <img src="images/full-house-frame-02.webp" class="mx-auto img-fluid object-fit-cover" alt="Renovation Project undertaken by our construction company in Gros Islet" loading="lazy">
+        <div class="gallery-caption"></div>
+      </div>
+      <!-- Gallery Item 6 (Repeat hero image style) -->
+      <div class="gallery-item">
+        <img src="images/almost-completed-teal-house.webp" class="mx-auto img-fluid object-fit-cover" alt="Teal house in the closing stages of construction undertaken by our construction company in Gros Islet" loading="lazy">
+        <div class="gallery-caption"></div>
+      </div>
+      <!-- Gallery Item 7 -->
+      <div class="gallery-item">
+        <img src="images/modern-house-project-in-the-making-02.webp" class="mx-auto img-fluid object-fit-cover" alt="Modern house project still in the making by our construction company in Gros Islet" loading="lazy">
+        <div class="gallery-caption"></div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <i class="fas fa-arrow-left"></i> Drag to scroll <i class="fas fa-arrow-right"></i>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-divider">
+
+<!-- ============================
+     SERVICES
+     ============================ 
+<section id="services">
+  <div class="container position-relative">
+    <div class="text-center mb-5 reveal">
+      <span class="section-eyebrow">What We Do</span>
+      <h2 class="section-title light">Construction Services We Offer</h2>
+      <div class="title-underline center"></div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4 reveal reveal-delay-1">
+        <div class="service-card h-100">
+          <div class="service-icon"><i class="fas fa-building"></i></div>
+         <h3 class="service-title">Full Construction</h3>
+<p class="service-desc">We provide full construction services in Gros Islet, handling residential building projects from foundation to completion. Our team ensures every stage of construction is completed with precision, meeting local building standards and client expectations. We also coordinate materials, labor, and timelines to ensure efficient project delivery across Gros Islet and surrounding areas.
+<br>
+From the first blueprint to the final finishing touches, we manage your entire build so you don't have to worry about scheduling delays or material shortages. Our transparent pricing means you receive a clear, detailed quote upfront with no unexpected costs along the way. We guide you through the local permitting and planning approval process, saving you time and navigating Saint Lucia's requirements on your behalf. Whether you're building your dream home or a rental property, our experienced team delivers high-quality workmanship, clear communication, and on-time completion so you can move in with confidence.
+</p>
+        </div>
+      </div>
+      <div class="col-md-4 reveal reveal-delay-2">
+        <div class="service-card h-100">
+          <div class="service-icon"><i class="fas fa-tools"></i></div>
+          <h3 class="service-title">Renovations &amp; Upgrades</h3>
+          <p class="service-desc">Our renovation services in Gros Islet help homeowners upgrade and improve their properties with modern, durable solutions across Gros Islet and surrounding areas.
+<br>
+We combine transparent pricing and clear communication to ensure every upgrade stays on budget without unexpected costs. Our reliable team delivers high-quality workmanship and attention to detail, so you get long-lasting results that add real value to your home. Whether you're modernizing a single room or completing a full property upgrade, we handle every phase from planning to finishing touches. Plus, for overseas property owners, we provide regular photo updates via WhatsApp, keeping you fully informed no matter where you are.
+</p>
+        </div>
+      </div>
+      <div class="col-md-4 reveal reveal-delay-3">
+        <div class="service-card h-100">
+          <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
+          <h3 class="service-title">Project Management</h3>
+  <p class="service-desc">We offer professional construction project management in Gros Islet, ensuring projects are completed on time and within budget throughout Gros Islet, Micoud, and Vieux-Fort.
+<br>
+We handle every phase from foundation to finishing touches, so you don't have to coordinate multiple contractors or worry about delays. Our team provides clear, consistent updates and transparent pricing with no hidden costs, giving you full peace of mind from start to completion. For the Gros Islet diaspora and overseas property owners, we manage everything on the ground and send regular photo updates via WhatsApp, email or any other agreed upon file sharing medium keeping you fully connected to your project. Whether you're building a new home or upgrading a commercial space, we deliver reliable results with attention to detail and on-time completion every time.
+</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  -->
+
+<hr class="gold-divider">
+
+  <!-- ============================
+     WHERE WE SERVE
+     ============================ 
+<section id="where-we-serve" class="mt-5 mb-3">
+  
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-eyebrow">Service Areas</span>
+      <h2 class="section-title">Serving Gros Islet, Micoud, and Vieux-Fort</h2>
+      <div class="title-underline center"></div>
+      <p style="max-width:520px;margin:0 auto;color:var(--text-mid);font-size:.95rem;line-height:1.8;">Based in Gros Islet, Verdesirs Consulting Inc provides construction services throughout Gros Islet as well as nearby areas including Micoud and Vieux-Fort, delivering reliable results for residential and renovation projects.
+  </p>
+    </div>
+  </div>
+  
+</section>
+  
+<hr class="gold-divider">-->
+
+<!-- ============================
+     WHY US
+     ============================ 
+<section id="why-us" class="construction-bg">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-eyebrow">Our Difference</span>
+      <h2 class="section-title">Why Choose Our Construction Company In Gros Islet</h2>
+      <div class="title-underline center"></div>
+      <p style="max-width:520px;margin:0 auto;color:var(--text-mid);font-size:.95rem;line-height:1.8;">As a leading construction company in Gros Islet, we are committed to delivering reliable and high-quality building solutions with clear communication and consistent results. But beyond that, here is what truly sets us apart for homeowners and property owners across Saint Lucia.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3 reveal reveal-delay-1">
+        <div class="why-card">
+          <div class="why-number">01</div>
+          <div class="why-title">Island-Wide Service</div>
+          <p class="why-desc">We are an experienced local construction company based right here in Gros Islet, but we proudly serve clients across Micoud, Vieux-Fort, Castries, Soufrière, and surrounding communities. No matter where your project is located on the island, our team will be there on time, ready to work.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3 reveal reveal-delay-2">
+        <div class="why-card">
+          <div class="why-number">02</div>
+          <div class="why-title">Fast Response</div>
+          <p class="why-desc">When you message us on WhatsApp, you get a fast, real response — not an automated message. We know that construction delays cost you money and peace of mind. That is why we provide clear project schedules upfront and keep you updated at every stage, ensuring on-time completion across Gros Islet and nearby areas.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3 reveal reveal-delay-3">
+        <div class="why-card">
+          <div class="why-number">03</div>
+          <div class="why-title">Reliable Team</div>
+          <p class="why-desc">Our team takes pride in attention to detail, from the foundation to the final paint stroke. We use durable, modern materials and follow local building standards to ensure your renovation or new build stands strong for years. We are not just builders — we are your partners in bringing your vision to life.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3 reveal reveal-delay-4">
+        <div class="why-card">
+          <div class="why-number">04</div>
+          <div class="why-title">Transparent Pricing</div>
+          <p class="why-desc">No hidden fees. No surprise costs. We provide a detailed, written quote before any work begins, so you know exactly what you are paying for. Whether you are a local homeowner or a diaspora client managing a project from overseas, we keep communication clear and honest through WhatsApp updates, photos, and regular check-ins.</p>
+        </div>
+      </div>
+    </div>
+      <p style="max-width:520px;margin:0 auto;color:var(--text-mid);font-size:.95rem;line-height:1.8;"><strong>Bottom line:</strong> When you choose Verdesirs Consulting Inc., you get a Saint Lucia-rooted team that treats your home or commercial project like our own. We deliver quality, transparency, and reliability — from Gros Islet to Micoud to Vieux-Fort.</p>
+  </div>
+</section>-->
+
+<!-- ============================
+     PROCESS
+     ============================ 
+<section id="process">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 reveal">
+        <span class="section-eyebrow">Simple Steps</span>
+        <h2 class="section-title">How It Works</h2>
+        <div class="title-underline"></div>
+
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <div class="step-title">Send Your Request</div>
+            <p class="step-desc">Message us with details about your project.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <div class="step-title">Get a Quote</div>
+            <p class="step-desc">We review and provide a clear estimate.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <div class="step-title">Start Your Project</div>
+            <p class="step-desc">We handle the work from start to completion</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 reveal reveal-delay-2">
+        <div class="process-visual">
+          <img src="images/construction-process-images.webp" class="mx-auto img-fluid object-fit-cover" alt="Construction Process with workers working for our construction company in Gros Islet " loading="lazy">
+          <div class="process-visual-badge">
+            <div class="pv-badge-num">3</div>
+            <div class="pv-badge-label">Simple Steps</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>-->
+
+  <!-- ============================
+     FAQ SECTION
+     ============================ 
+<section id="faq" class="construction-bg">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-eyebrow">Got Questions?</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="title-underline center"></div>
+      <p style="max-width:540px;margin:0 auto;color:var(--text-mid);font-size:.95rem;line-height:1.8;">
+        Everything you need to know before starting your project with our construction Company in Gros Islet.
+      </p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-9 reveal reveal-delay-1">
+        <div class="accordion accordion-flush faq-accordion" id="faqAccordion">
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+                Do you offer construction services in Gros Islet?
+              </button>
+            </h3>
+            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes — we are based in Gros Islet and serve clients across Saint Lucia, including Micoud, Vieux-Fort, Castries, Soufrière, and surrounding communities. Whether your project is in the north or south of the island, our team can accommodate you.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                How much does construction cost in Gros Islet?
+              </button>
+            </h3>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Construction costs in Gros Islet and across Saint Lucia vary depending on the size of the project, materials selected, site conditions, and scope of work. A residential build will be priced differently from a commercial renovation or a simple upgrade. We provide detailed, transparent quotes — contact us on WhatsApp and we'll assess your specific needs at no obligation.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                What types of construction services do you offer to residents of Gros Islet and the surrounding communities?
+              </button>
+            </h3>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Verdesirs Consulting Inc. offers full residential construction, commercial construction, renovations and upgrades, and end-to-end project management. Whether you're building from the ground up or modernizing an existing space, we handle all phases from foundation to finishing.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                How do I get a quote from Verdesirs Consulting Inc.?
+              </button>
+            </h3>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                The fastest way is to message us directly on WhatsApp at <a href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20quote%3F" target="_blank" style="color:var(--gold);font-weight:600;">+1 (758) 715-1506</a>. Share a brief description of your project and we'll follow up quickly with questions and an estimate.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                How long does a construction project take in Saint Lucia?
+              </button>
+            </h3>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Project timelines depend on the complexity and scale of the work. A renovation may take a few weeks, while a full residential build typically spans several months. We provide a clear project schedule at the start and keep you updated throughout every phase to ensure on-time delivery.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                Do you handle building permits and planning approvals?
+              </button>
+            </h3>
+            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                We can guide you through the permitting and planning approval process in Saint Lucia. As your construction partner, we help ensure your project meets the requirements set by the relevant local authorities before work begins.
+              </div>
+            </div>
+          </div>
+
+            <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
+                Do you handle renovation projects?
+              </button>
+            </h3>
+            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                  Yes, we offer complete renovation and upgrade services for homes across Gros Islet and surrounding areas.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
+                Can you manage my project if I am overseas?
+              </button>
+            </h3>
+            <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Absolutely. We work with diaspora clients and overseas property owners regularly. Through our project management service, we oversee everything on the ground and provide regular updates via WhatsApp and photos, so you remain fully informed regardless of where you are.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9" aria-expanded="false" aria-controls="faq9">
+                Why should I choose Verdesirs Consulting Inc. for my project?
+              </button>
+            </h3>
+            <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                We are a Saint Lucia-rooted company with hands-on experience across residential and commercial projects island-wide. We offer transparent pricing, reliable communication, and a dedicated team committed to quality at every stage. Our track record of completed projects speaks for itself — explore our portfolio above.
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end accordion -->
+
+        <div class="text-center mt-5 reveal">
+          <p style="color:var(--text-mid);font-size:.9rem;margin-bottom:1.25rem;">Don't see your question? Ask us directly.</p>
+          <a href="https://wa.me/17587151506?text=Hi%2C%20I%20have%20a%20question%20about%20a%20construction%20project." target="_blank" class="btn-wa" style="font-size:.85rem;padding:12px 28px;">
+            <i class="fab fa-whatsapp"></i> Ask on WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>-->
+
+<!-- ============================
+     CTA QUOTE SECTION
+     ============================ 
+<section id="quote-cta">
+  <div class="container position-relative">
+    <div class="text-center reveal">
+      <span class="section-eyebrow">Start Today</span>
+      <h2 class="cta-title">Get a Quote for Your Construction Project in Gros Islet</h2>
+      <p class="cta-sub mx-auto">Contact Verdesirs Consulting Inc today for reliable construction services in Gros Islet and get a fast quote for your project.</p>
+
+      <div>
+        <a href="https://wa.me/17587151506?text=I%20want%20to%20build%20a%20house%20in%20Saint%20Lucia" class="quote-btn" target="_blank">
+          <i class="fab fa-whatsapp"></i> Build a House
+        </a>
+        <a href="https://wa.me/17587151506?text=I%20need%20a%20renovation%20quote" class="quote-btn" target="_blank">
+          <i class="fab fa-whatsapp"></i> Renovation Quote
+        </a>
+        <a href="https://wa.me/17587151506?text=I%20need%20help%20managing%20a%20construction%20project" class="quote-btn" target="_blank">
+          <i class="fab fa-whatsapp"></i> Project Management
+        </a>
+      </div>
+
+      <p class="cta-note">We respond quickly to all inquiries.</p>
+    </div>
+  </div>
+</section>-->
+
+<!-- ============================
+     ABOUT
+     ============================ 
+<section id="about">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 reveal">
+        <div class="about-image-wrap">
+          <img src="images/construction-progress.webp" alt="About Verdesirs Project Images Carousel" class="img-fluid mx-auto object-fit-cover about-img-main" loading="lazy">
+          <div class="about-badge">
+            <div class="about-badge-num">VD</div>
+            <div class="about-badge-label">Verdesirs Consulting Inc.</div>
+          </div>
+          <img src="images/verdesirs-logo-hd.webp" alt="Project Logo Image" class="mx-auto img-fluid object-fit-cover about-img-accent" loading="lazy">
+        </div>
+      </div>
+
+      <div class="col-lg-7 reveal reveal-delay-2">
+        <div class="about-text">
+          <span class="section-eyebrow">About Us</span>
+          <h2 class="section-title">Verdesirs Consulting Inc.</h2>
+          <div class="title-underline"></div>
+
+          <p>Verdesirs Consulting Inc. is a full-service construction company located in Gros Islet, Saint Lucia. We bring together experienced professionals, quality materials, and a commitment to excellence on every project we undertake — from foundations to finishing touches.</p>
+
+          <p>Whether you're building your dream home, upgrading a commercial space, or need a trusted partner to manage your construction project end to end, Verdesirs delivers results with transparency and dedication.</p>
+
+          <p>We are not just builders — we are your partners in bringing ideas to life across the beautiful island of Saint Lucia.</p>
+
+          <div class="about-values">
+            <div class="about-value"><i class="fas fa-check-circle"></i> Quality First</div>
+            <div class="about-value"><i class="fas fa-check-circle"></i> Client-Focused</div>
+            <div class="about-value"><i class="fas fa-check-circle"></i> Island Built</div>
+            <div class="about-value"><i class="fas fa-check-circle"></i> Transparent Pricing</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>-->
+
+<!-- ============================
+     FOOTER
+     ============================ -->
+<footer>
+  <div class="footer-top">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- Brand Col -->
+        <div class="col-lg-4">
+          <div class="footer-brand-logo">
+            <img src="images/verdesirs-logo-hd.webp" class="img-fluid mx-auto object-fit-cover rounded-pill" loading="lazy" alt="Verdesirs Logo">
+          </div>
+          <div class="footer-brand-name">VERDESIRS</div>
+          <div class="footer-brand-sub">Consulting Inc. — Saint Lucia</div>
+          <p class="footer-about">Verdesirs Consulting Inc. is a trusted full-service construction company in Gros Islet serving clients across Saint Lucia. From residential builds to commercial renovations, we deliver quality work with integrity.</p>
+          <div class="social-links mt-4">
+            <a href="https://www.instagram.com/verdesirs_consulting_inc" target="_blank" class="social-link" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/17587151506" target="_blank" class="social-link wa" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-sm-6 col-lg-2">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#our-work">Our Work</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#process">How It Works</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-sm-6 col-lg-2">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/17587151506?text=I%20want%20to%20build%20a%20house%20in%20Saint%20Lucia" target="_blank">Build a House</a></li>
+            <li><a href="https://wa.me/17587151506?text=I%20need%20a%20renovation%20quote" target="_blank">Renovations</a></li>
+            <li><a href="https://wa.me/17587151506?text=I%20need%20help%20managing%20a%20construction%20project" target="_blank">Project Management</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-4">
+          <h4 class="footer-heading">Contact Us</h4>
+
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="footer-contact-text">Saint Lucia, West Indies</div>
+          </div>
+
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="footer-contact-text">
+              <a href="https://wa.me/17587151506" target="_blank">+1 (758) 715-1506</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><i class="fab fa-instagram"></i></div>
+            <div class="footer-contact-text">
+              <a href="https://www.instagram.com/verdesirs_consulting_inc" target="_blank">@verdesirs_consulting_inc</a>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <a href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20quote%3F" target="_blank" class="btn-wa" style="font-size:.82rem;padding:12px 24px;">
+              <i class="fab fa-whatsapp"></i> Get a Free Quote
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Verdesirs Consulting Inc. All rights reserved. • Saint Lucia</p>
+      <div class="footer-legal">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================
+     WHATSAPP FLOATER
+     ============================ -->
+<div class="wa-float">
+  <a href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20quote%3F" target="_blank" class="wa-float-btn">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <div class="wa-float-tooltip">Chat with us on WhatsApp</div>
+</div>
+
+<!-- ============================
+     SCRIPTS
+     ============================ -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Navbar scroll effect
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  reveals.forEach(el => revealObserver.observe(el));
+
+  // Optional: Drag to scroll functionality for the gallery
+  const scrollContainer = document.getElementById('horizontalScrollGallery');
+  if (scrollContainer) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    scrollContainer.addEventListener('mousedown', (e) => {
+      isDown = true;
+      scrollContainer.style.cursor = 'grabbing';
+      startX = e.pageX - scrollContainer.offsetLeft;
+      scrollLeft = scrollContainer.scrollLeft;
+    });
+
+    scrollContainer.addEventListener('mouseleave', () => {
+      isDown = false;
+      scrollContainer.style.cursor = 'grab';
+    });
+
+    scrollContainer.addEventListener('mouseup', () => {
+      isDown = false;
+      scrollContainer.style.cursor = 'grab';
+    });
+
+    scrollContainer.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - scrollContainer.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      scrollContainer.scrollLeft = scrollLeft - walk;
+    });
+  }
+</script>
+
+</body>
+</html>
