@@ -10,6 +10,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="css/style.css">
 <style>
+
+  .hero-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem; /* ← this is the fix */
+}
+  
 /* ===== HORIZONTAL SCROLL GALLERY STYLES ===== */
 .horizontal-gallery-section {
   background: #ffffff;  /* Changed from dark to white */
@@ -190,21 +199,23 @@
     <div class="row">
       <div class="col-lg-8">
         <span class="hero-tag">Based in Gros Islet · Serving All of Saint Lucia</span>
-        <h1 class="hero-title">
-          Building Homes Saint Lucians<br>
-          <em>Can Be Proud Of</em>
-        </h1>
-        <p class="hero-sub">Verdesirs Consulting Inc. has been delivering quality residential 
+      <h1 class="hero-title">
+  Building Homes<br>
+  Saint Lucians <em>Can Be Proud Of</em>
+</h1>
+       <p class="hero-sub">Verdesirs Consulting Inc. has been delivering quality residential 
 construction, renovations, and full project management across Saint Lucia 
 for 6 years — with a free site visit, a written quote before any work 
 begins, and a team that shows up every time.</p>
-        <p class="hero-services-line">First Home Builds &nbsp;•&nbsp; Renovations & Upgrades &nbsp;•&nbsp; Overseas Project Management</p>
-        <div class="hero-btns">
-          <a href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20quote%3F" class="btn-wa" target="_blank" aria-label="Get a Quote on WhatsApp button opening a WhatsApp chat convo">
-            <i class="fab fa-whatsapp"></i> Get a Quote on WhatsApp
-          </a>
-          <a href="#our-work" class="btn-ghost">View Our Work</a>
-        </div>
+
+<p class="hero-services-line">First Home Builds &nbsp;•&nbsp; Renovations & Upgrades &nbsp;•&nbsp; Overseas Project Management</p>
+
+<div class="hero-btns">
+  <a href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20quote%3F" class="btn-wa" target="_blank" aria-label="Get a Free Quote on WhatsApp">
+    <i class="fab fa-whatsapp"></i> Get a Free Quote on WhatsApp
+  </a>
+  <a href="#our-work" class="btn-ghost">View Our Work</a>
+</div>
       </div>
     </div>
   </div>
