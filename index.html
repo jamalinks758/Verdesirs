@@ -143,6 +143,201 @@
     font-size: 1.8rem;
   }
 }
+
+/* ==============================
+   SERVICE AREAS
+   ============================== */
+#service-areas {
+  padding: 100px 0;
+}
+
+.sa-intro {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.85;
+  margin-top: 8px;
+}
+
+/* Community pill grid */
+.sa-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.sa-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.88rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+}
+
+.sa-pill i {
+  color: var(--gold);
+  font-size: 0.75rem;
+}
+
+.sa-pill:hover {
+  background: rgba(201, 168, 76, 0.1);
+  border-color: var(--gold);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* "All of Saint Lucia" special pill */
+.sa-pill--all {
+  background: rgba(201, 168, 76, 0.12);
+  border-color: var(--gold);
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.sa-pill--all i {
+  color: var(--gold);
+}
+
+.sa-pill--all:hover {
+  background: rgba(201, 168, 76, 0.2);
+}
+
+/* "Not sure" CTA row */
+.sa-check-text {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
+.sa-check-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: 1px solid var(--wa-green);
+  color: var(--wa-green);
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: 0.05em;
+  padding: 13px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.sa-check-btn:hover {
+  background: var(--wa-green);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Section divider */
+.sa-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(201, 168, 76, 0.3), transparent);
+  margin: 8px 0;
+}
+
+/* Diaspora callout block */
+.sa-diaspora {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-left: 4px solid var(--gold);
+  border-radius: 6px;
+  padding: 48px 44px;
+  transition: background 0.3s;
+}
+
+.sa-diaspora:hover {
+  background: rgba(201, 168, 76, 0.06);
+}
+
+.sa-diaspora-badge {
+  width: 64px;
+  height: 64px;
+  background: rgba(201, 168, 76, 0.12);
+  border: 1.5px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.sa-diaspora-label {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.sa-diaspora-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.sa-diaspora-title em {
+  font-style: normal;
+  color: var(--gold);
+}
+
+.sa-diaspora-text {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.9;
+  margin-bottom: 32px;
+  max-width: 640px;
+}
+
+.sa-diaspora-cta {
+  font-size: 0.88rem;
+  padding: 13px 28px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #service-areas { padding: 72px 0; }
+
+  .sa-diaspora {
+    flex-direction: column;
+    gap: 24px;
+    padding: 36px 28px;
+  }
+
+  .sa-diaspora-badge {
+    width: 52px;
+    height: 52px;
+    font-size: 1.3rem;
+  }
+
+  .sa-pill {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+}
 </style>
 </head>
 
@@ -393,6 +588,114 @@
   </div>
 </section>
 
+<hr class="gold-divider">
+
+ <!-- ============================================================
+     SECTION 4 — SERVICE AREAS
+     PLACEMENT: Paste this block AFTER the closing </section>
+     tag of #services and BEFORE the opening <section> tag
+     of #why-us in your HTML file.
+     ============================================================ -->
+
+<section id="service-areas" class="blueprint-bg">
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-7 reveal">
+        <span class="section-eyebrow">Where We Work</span>
+        <h2 class="section-title light">We Build Across All of Saint Lucia</h2>
+        <div class="title-underline center"></div>
+        <p class="sa-intro">
+          Based in Gros Islet — but our work doesn't stop there. From Cap Estate 
+          in the north to Vieux Fort in the south, we take on residential builds, 
+          renovations, and project management across every district on the island.
+        </p>
+      </div>
+    </div>
+
+    <!-- COMMUNITY GRID -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-10 reveal reveal-delay-1">
+        <div class="sa-grid">
+          <div class="sa-pill"><i class="fas fa-check-circle"></i> Gros Islet</div>
+          <div class="sa-pill"><i class="fas fa-check-circle"></i> Rodney Bay</div>
+          <div class="sa-pill"><i class="fas fa-check-circle"></i> Cap Estate</div>
+          <div class="sa-pill"><i class="fas fa-check-circle"></i> Castries</div>
+          <div class="sa-pill"><i class="fas fa-check-circle"></i> Bois d'Orange</div>
+          <div class="sa-pill"><i class="fas fa-check-circle"></i> Babonneau</div>
+          <div class="sa-pill"><i class="fas fa-check-circle"></i> Anse la Raye</div>
+          <div class="sa-pill"><i class="fas fa-check-circle"></i> Canaries</div>
+          <div class="sa-pill"><i class="fas fa-check-circle"></i> Soufrière</div>
+          <div class="sa-pill"><i class="fas fa-check-circle"></i> Choiseul</div>
+          <div class="sa-pill"><i class="fas fa-check-circle"></i> Laborie</div>
+          <div class="sa-pill"><i class="fas fa-check-circle"></i> Micoud</div>
+          <div class="sa-pill"><i class="fas fa-check-circle"></i> Dennery</div>
+          <div class="sa-pill"><i class="fas fa-check-circle"></i> Vieux Fort</div>
+          <div class="sa-pill"><i class="fas fa-check-circle"></i> Augier</div>
+          <div class="sa-pill sa-pill--all"><i class="fas fa-map-marker-alt"></i> All of Saint Lucia</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NOT SURE CTA -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8 text-center reveal reveal-delay-2">
+        <p class="sa-check-text">Not sure if we cover your area?</p>
+        <a href="https://wa.me/17587151506?text=Hi%2C%20I%20want%20to%20confirm%20if%20you%20cover%20construction%20projects%20in%20my%20area." 
+           target="_blank" 
+           class="sa-check-btn"
+           aria-label="Ask Verdesirs if they cover your area on WhatsApp">
+          <i class="fab fa-whatsapp"></i> Message Us — We Respond Within the Hour
+        </a>
+      </div>
+    </div>
+
+    <!-- GOLD DIVIDER LINE -->
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="sa-divider"></div>
+      </div>
+    </div>
+
+    <!-- DIASPORA CALLOUT BLOCK -->
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-10 reveal reveal-delay-2">
+        <div class="sa-diaspora">
+
+          <div class="sa-diaspora-badge">
+            <i class="fas fa-globe-americas"></i>
+          </div>
+
+          <div class="sa-diaspora-body">
+            <span class="sa-diaspora-label">Overseas? No Problem.</span>
+            <h3 class="sa-diaspora-title">
+              Building Back Home From the UK, US, or Canada?<br>
+              <em>We Are Your Boots on the Ground.</em>
+            </h3>
+            <p class="sa-diaspora-text">
+              Managing a Saint Lucia construction project from abroad is stressful when 
+              you can't be there to see it yourself. We handle everything on the ground — 
+              site visits, contractor coordination, permits, and purchasing. You get regular 
+              WhatsApp photo updates and stay fully in control of every decision, no matter 
+              where in the world you are.
+            </p>
+            <a href="https://wa.me/17587151506?text=Hi%2C%20I%20am%20based%20overseas%20and%20I%20need%20help%20managing%20a%20construction%20project%20in%20Saint%20Lucia." 
+               target="_blank" 
+               class="btn-wa sa-diaspora-cta"
+               aria-label="Overseas clients contact Verdesirs on WhatsApp">
+              <i class="fab fa-whatsapp"></i> Let's Talk About Your Project
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+ 
 <hr class="gold-divider">
 
 <!-- ============================
