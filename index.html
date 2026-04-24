@@ -3,30 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Verdesirs Consulting Inc | Construction Experts — Saint Lucia</title>
-<meta name="description" content="Professional construction company in Gros Islet offering full construction, renovations, and project management services across Gros Islet, Micoud, and Vieux-Fort. Get a quote today.">
+
+<!-- ============================================================
+     PRIMARY SEO META
+     ============================================================ -->
+<title>Verdesirs Consulting Inc. | Construction Company in Saint Lucia</title>
+<meta name="description" content="Verdesirs Consulting Inc. — Saint Lucia's trusted construction company. Residential builds, renovations & project management island-wide. Free site visit. Written quote before work begins. Call us on WhatsApp.">
+<meta name="keywords" content="construction company Saint Lucia, construction company Gros Islet, home builder Saint Lucia, renovation Saint Lucia, project management Saint Lucia, construction Castries, construction Vieux Fort, construction Micoud, diaspora construction Saint Lucia, build house Saint Lucia">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Verdesirs Consulting Inc.">
+<link rel="canonical" href="https://www.verdesirsconsultinginc.com/">
+
+<!-- ============================================================
+     OPEN GRAPH — FACEBOOK / WHATSAPP SHARE PREVIEWS
+     ============================================================ -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.verdesirsconsultinginc.com/">
+<meta property="og:title" content="Verdesirs Consulting Inc. | Construction Company in Saint Lucia">
+<meta property="og:description" content="6 years building homes Saint Lucians are proud of. Residential builds, renovations & project management across all of Saint Lucia. Free site visit. Written quote guaranteed.">
+<meta property="og:image" content="https://www.verdesirsconsultinginc.com/images/verdesirs-og-image.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Verdesirs Consulting Inc. — Construction Company in Saint Lucia">
+<meta property="og:locale" content="en_LC">
+<meta property="og:site_name" content="Verdesirs Consulting Inc.">
+
+<!-- ============================================================
+     TWITTER / X CARD
+     ============================================================ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Verdesirs Consulting Inc. | Construction Company in Saint Lucia">
+<meta name="twitter:description" content="Building homes Saint Lucians are proud of. Island-wide service. Free site visit. Written quote before work begins.">
+<meta name="twitter:image" content="https://www.verdesirsconsultinginc.com/images/verdesirs-og-image.webp">
+
+<!-- ============================================================
+     GEO TAGS — LOCAL SEO SIGNAL
+     ============================================================ -->
+<meta name="geo.region" content="LC">
+<meta name="geo.placename" content="Gros Islet, Saint Lucia">
+<meta name="geo.position" content="14.0833;-60.9500">
+<meta name="ICBM" content="14.0833, -60.9500">
+
+<!-- ============================================================
+     FAVICON
+     ============================================================ -->
+<link rel="icon" type="image/webp" href="images/verdesirs-logo-hd.webp">
+<link rel="apple-touch-icon" href="images/verdesirs-logo-hd.webp">
+
+<!-- ============================================================
+     PRECONNECT — PERFORMANCE
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+<!-- ============================================================
+     CSS DEPENDENCIES
+     ============================================================ -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="css/style.css">
+
+<!-- ============================================================
+     PAGE-LEVEL STYLES
+     ============================================================ -->
 <style>
-/* ===== HORIZONTAL SCROLL GALLERY STYLES ===== */
- body {
-   font-display: swap;
- } 
-  
+
+/* ===== HERO BUTTON FIX ===== */
+.hero-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+/* ===== HORIZONTAL SCROLL GALLERY ===== */
 .horizontal-gallery-section {
-  background: #ffffff;  /* Changed from dark to white */
+  background: #ffffff;
   padding: 4rem 0;
   overflow-x: hidden;
 }
 
-.gallery-header {
-  margin-bottom: 2.5rem;
-}
+.gallery-header { margin-bottom: 2.5rem; }
 
 .gallery-header .section-eyebrow {
-  color: var(--gold, #c8a86b);
+  color: var(--gold);
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.85rem;
@@ -36,7 +99,7 @@
 }
 
 .gallery-header .section-title {
-  color: #1a1a1a;  /* Changed from white to dark */
+  color: var(--navy);
   font-size: 2.2rem;
   font-weight: 600;
   font-family: 'Cormorant Garamond', serif;
@@ -45,14 +108,12 @@
 .gallery-header .title-underline {
   width: 70px;
   height: 3px;
-  background: var(--gold, #c8a86b);
+  background: var(--gold);
   margin-top: 0.75rem;
   margin-bottom: 1rem;
 }
 
-.gallery-header p {
-  color: #555;  /* Changed from #aaa to darker gray for contrast */
-}
+.gallery-header p { color: var(--text-mid); }
 
 .gallery-scroll-container {
   display: flex;
@@ -62,36 +123,27 @@
   padding: 1rem 0 2rem 0;
   cursor: grab;
   scrollbar-width: thin;
-  scrollbar-color: var(--gold, #c8a86b) #e0e0e0;  /* Lighter track color */
+  scrollbar-color: var(--gold) #e0e0e0;
 }
 
-.gallery-scroll-container::-webkit-scrollbar {
-  height: 6px;
-}
-
-.gallery-scroll-container::-webkit-scrollbar-track {
-  background: #e0e0e0;  /* Light gray track */
-  border-radius: 10px;
-}
-
-.gallery-scroll-container::-webkit-scrollbar-thumb {
-  background: var(--gold, #c8a86b);
-  border-radius: 10px;
-}
+.gallery-scroll-container:active { cursor: grabbing; }
+.gallery-scroll-container::-webkit-scrollbar { height: 6px; }
+.gallery-scroll-container::-webkit-scrollbar-track { background: #e0e0e0; border-radius: 10px; }
+.gallery-scroll-container::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
 
 .gallery-item {
   flex: 0 0 auto;
   width: 300px;
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
   position: relative;
   transition: all 0.4s ease;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);  /* Softer shadow for white bg */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
 .gallery-item:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.18);
 }
 
 .gallery-item img {
@@ -102,63 +154,41 @@
   transition: transform 0.5s ease;
 }
 
-.gallery-item:hover img {
-  transform: scale(1.05);
-}
+.gallery-item:hover img { transform: scale(1.05); }
 
 .gallery-caption {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(13,27,62,0.88), transparent);
   padding: 1.5rem 1rem 0.8rem;
   color: white;
-  font-weight: 500;
-  font-size: 0.9rem;
-  text-align: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .scroll-hint {
   text-align: center;
   margin-top: 1rem;
   font-size: 0.8rem;
-  color: #777;  /* Darker for white bg */
+  color: var(--text-mid);
   letter-spacing: 1px;
 }
 
-.scroll-hint i {
-  color: var(--gold, #c8a86b);
-  margin-right: 6px;
-}
+.scroll-hint i { color: var(--gold); margin: 0 4px; }
 
-@media (max-width: 768px) {
-  .gallery-item {
-    width: 260px;
-  }
-  .gallery-item img {
-    height: 320px;
-  }
-  .gallery-header .section-title {
-    font-size: 1.8rem;
-  }
-}
-
-/* ==============================
-   SERVICE AREAS
-   ============================== */
-#service-areas {
-  padding: 100px 0;
-}
+/* ===== SERVICE AREAS ===== */
+#service-areas { padding: 100px 0; }
 
 .sa-intro {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255,255,255,0.7);
   line-height: 1.85;
   margin-top: 8px;
 }
 
-/* Community pill grid */
 .sa-grid {
   display: flex;
   flex-wrap: wrap;
@@ -170,9 +200,9 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(201, 168, 76, 0.25);
-  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(201,168,76,0.25);
+  color: rgba(255,255,255,0.8);
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 0.88rem;
   letter-spacing: 0.1em;
@@ -182,37 +212,26 @@
   transition: all 0.25s ease;
 }
 
-.sa-pill i {
-  color: var(--gold);
-  font-size: 0.75rem;
-}
+.sa-pill i { color: var(--gold); font-size: 0.75rem; }
 
 .sa-pill:hover {
-  background: rgba(201, 168, 76, 0.1);
+  background: rgba(201,168,76,0.1);
   border-color: var(--gold);
   color: white;
   transform: translateY(-2px);
 }
 
-/* "All of Saint Lucia" special pill */
 .sa-pill--all {
-  background: rgba(201, 168, 76, 0.12);
+  background: rgba(201,168,76,0.12);
   border-color: var(--gold);
   color: var(--gold);
   font-weight: 700;
 }
 
-.sa-pill--all i {
-  color: var(--gold);
-}
+.sa-pill--all:hover { background: rgba(201,168,76,0.2); }
 
-.sa-pill--all:hover {
-  background: rgba(201, 168, 76, 0.2);
-}
-
-/* "Not sure" CTA row */
 .sa-check-text {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255,255,255,0.55);
   font-size: 0.9rem;
   letter-spacing: 0.05em;
   margin-bottom: 16px;
@@ -241,34 +260,30 @@
   transform: translateY(-2px);
 }
 
-/* Section divider */
 .sa-divider {
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(201, 168, 76, 0.3), transparent);
+  background: linear-gradient(to right, transparent, rgba(201,168,76,0.3), transparent);
   margin: 8px 0;
 }
 
-/* Diaspora callout block */
 .sa-diaspora {
   display: flex;
   gap: 40px;
   align-items: flex-start;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(201, 168, 76, 0.2);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,168,76,0.2);
   border-left: 4px solid var(--gold);
   border-radius: 6px;
   padding: 48px 44px;
   transition: background 0.3s;
 }
 
-.sa-diaspora:hover {
-  background: rgba(201, 168, 76, 0.06);
-}
+.sa-diaspora:hover { background: rgba(201,168,76,0.06); }
 
 .sa-diaspora-badge {
   width: 64px;
   height: 64px;
-  background: rgba(201, 168, 76, 0.12);
+  background: rgba(201,168,76,0.12);
   border: 1.5px solid var(--gold);
   border-radius: 50%;
   display: flex;
@@ -299,58 +314,274 @@
   margin-bottom: 20px;
 }
 
-.sa-diaspora-title em {
-  font-style: normal;
-  color: var(--gold);
-}
+.sa-diaspora-title em { font-style: normal; color: var(--gold); }
 
 .sa-diaspora-text {
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255,255,255,0.65);
   line-height: 1.9;
   margin-bottom: 32px;
   max-width: 640px;
 }
 
-.sa-diaspora-cta {
-  font-size: 0.88rem;
-  padding: 13px 28px;
+.sa-diaspora-cta { font-size: 0.88rem; padding: 13px 28px; }
+
+/* ===== WHY US — EXPANDED DESCRIPTIONS ===== */
+.why-desc { font-size: 0.88rem; color: var(--text-mid); line-height: 1.75; }
+
+/* ===== PROCESS — EXPANDED STEPS ===== */
+.step-desc { font-size: 0.9rem; color: var(--text-mid); line-height: 1.75; margin-top: 6px; }
+
+/* ===== FAQ ===== */
+#faq { padding: 100px 0; }
+
+.faq-accordion .accordion-item {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(13,27,62,0.12);
 }
 
-/* Responsive */
+.faq-accordion .accordion-item:first-child {
+  border-top: 1px solid rgba(13,27,62,0.12);
+}
+
+.faq-accordion .accordion-button {
+  background: transparent;
+  color: var(--navy);
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 1.25rem 1rem 1.25rem 0;
+  box-shadow: none;
+  border: none;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+  color: var(--gold);
+  background: transparent;
+  box-shadow: none;
+}
+
+.faq-accordion .accordion-button::after {
+  flex-shrink: 0;
+  margin-left: 1.5rem;
+}
+
+.faq-accordion .accordion-body {
+  color: var(--text-mid);
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  padding: 0 1rem 1.25rem 0;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   #service-areas { padding: 72px 0; }
-
-  .sa-diaspora {
-    flex-direction: column;
-    gap: 24px;
-    padding: 36px 28px;
-  }
-
-  .sa-diaspora-badge {
-    width: 52px;
-    height: 52px;
-    font-size: 1.3rem;
-  }
-
-  .sa-pill {
-    font-size: 0.8rem;
-    padding: 8px 14px;
-  }
+  #faq { padding: 72px 0; }
+  .faq-accordion .accordion-button { font-size: 0.93rem; }
+  .sa-diaspora { flex-direction: column; gap: 24px; padding: 36px 28px; }
+  .sa-diaspora-badge { width: 52px; height: 52px; font-size: 1.3rem; }
+  .sa-pill { font-size: 0.8rem; padding: 8px 14px; }
+  .gallery-item { width: 260px; }
+  .gallery-item img { height: 320px; }
+  .gallery-header .section-title { font-size: 1.8rem; }
 }
+
 </style>
+
+<!-- ============================================================
+     STRUCTURED DATA — LOCAL BUSINESS SCHEMA
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "name": "Verdesirs Consulting Inc.",
+  "url": "https://www.verdesirsconsultinginc.com",
+  "logo": "https://www.verdesirsconsultinginc.com/images/verdesirs-logo-hd.webp",
+  "image": "https://www.verdesirsconsultinginc.com/images/modern-house-project-in-the-making.webp",
+  "description": "Verdesirs Consulting Inc. is a full-service construction company based in Gros Islet, Saint Lucia. We provide residential construction, commercial renovation, and end-to-end project management island-wide — with a free site visit and written quote before work begins.",
+  "telephone": "+17587151506",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+17587151506",
+    "contactType": "customer service",
+    "availableLanguage": "English",
+    "contactOption": "TollFree"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Gros Islet",
+    "addressRegion": "Gros Islet",
+    "addressCountry": "LC"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 14.0833,
+    "longitude": -60.9500
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Gros Islet"},
+    {"@type": "City", "name": "Castries"},
+    {"@type": "City", "name": "Vieux Fort"},
+    {"@type": "City", "name": "Micoud"},
+    {"@type": "City", "name": "Soufrière"},
+    {"@type": "City", "name": "Dennery"},
+    {"@type": "City", "name": "Laborie"},
+    {"@type": "City", "name": "Choiseul"},
+    {"@type": "City", "name": "Anse la Raye"},
+    {"@type": "City", "name": "Canaries"},
+    {"@type": "Country", "name": "Saint Lucia"}
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Construction Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Residential Construction",
+          "description": "Full home builds from foundation to finishing touches across Saint Lucia."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Renovations and Upgrades",
+          "description": "Home and commercial renovation services island-wide with transparent pricing."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Construction Project Management",
+          "description": "End-to-end project management for local and overseas clients building in Saint Lucia."
+        }
+      }
+    ]
+  },
+  "sameAs": [
+    "https://www.instagram.com/verdesirs_consulting_inc"
+  ],
+  "foundingDate": "2018",
+  "priceRange": "$$"
+}
+</script>
+
+<!-- ============================================================
+     STRUCTURED DATA — FAQ PAGE SCHEMA
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you offer construction services across all of Saint Lucia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — we are based in Gros Islet and serve every district in Saint Lucia, including Castries, Micoud, Vieux Fort, Soufrière, Dennery, Laborie, Choiseul, Anse la Raye, Canaries, and all surrounding communities. No project is too far."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does construction cost in Saint Lucia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Construction costs vary depending on project size, materials, site conditions, and scope. We provide detailed, written quotes at no obligation — contact us on WhatsApp and we will assess your specific needs and give you a clear estimate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What construction services does Verdesirs Consulting Inc. offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer full residential construction, commercial construction, renovations and upgrades, and end-to-end project management across Saint Lucia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get a quote from Verdesirs Consulting Inc.?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Message us on WhatsApp at +1 (758) 715-1506. We also offer a free site visit before any quote is given. No work begins until you have a written estimate in hand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a construction project take in Saint Lucia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Timelines depend on scope. A renovation may take a few weeks; a full residential build typically spans several months. We provide a clear project schedule from day one and keep you updated at every stage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle building permits and planning approvals in Saint Lucia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We guide you through the permitting and planning approval process and ensure your project meets all requirements set by local Saint Lucian authorities before work begins."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you manage my Saint Lucia construction project if I am overseas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. We work with diaspora clients and overseas property owners regularly. We handle everything on the ground — site visits, contractor coordination, permits, and purchasing — and keep you informed with regular WhatsApp photo updates so you remain fully in control no matter where you are."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer a free site visit before giving a quote?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We offer a free initial site visit and consultation. You receive a written quote before any work begins — no verbal estimates, no surprises."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why should I choose Verdesirs Consulting Inc.?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We are a Saint Lucia-rooted company with 6 years of experience across residential and commercial projects island-wide. We offer a free site visit, a written quote before work starts, transparent pricing, reliable communication, and a team that shows up every time."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- ============================================================
+     STRUCTURED DATA — WEBSITE / SITELINKS SEARCHBOX
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Verdesirs Consulting Inc.",
+  "url": "https://www.verdesirsconsultinginc.com"
+}
+</script>
+
 </head>
 
 <body>
 
-<!-- ============================
+<!-- ============================================================
      NAVBAR
-     ============================ -->
-<nav id="mainNav" class="navbar navbar-expand-lg">
+     ============================================================ -->
+<nav id="mainNav" class="navbar navbar-expand-lg" role="navigation" aria-label="Main site navigation">
   <div class="container">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand" href="index.html" aria-label="Verdesirs Consulting Inc. — Go to homepage">
       <div class="nav-logo-circle">
-        <img src="images/verdesirs-logo-hd.webp" class="mx-auto img-fluid object-fit-cover rounded-pill" loading="lazy" alt="Verdesirs Logo">
+        <img src="images/verdesirs-logo-hd.webp" alt="Verdesirs Consulting Inc. logo" loading="eager" width="46" height="46">
       </div>
       <div>
         <span class="brand-text-top">VERDESIRS</span>
@@ -358,19 +589,26 @@
       </div>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+      aria-controls="navMenu" aria-expanded="false" aria-label="Open navigation menu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto align-items-center gap-1">
-        <li class="nav-item"><a class="nav-link" href="#our-work">Our Work</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#our-work" aria-label="View our completed projects">Our Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services" aria-label="View our construction services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#service-areas" aria-label="See areas we serve in Saint Lucia">Areas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#why-us" aria-label="Why clients choose Verdesirs">Why Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#process" aria-label="See how our process works">Process</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq" aria-label="Frequently asked questions">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about" aria-label="About Verdesirs Consulting Inc.">About</a></li>
         <li class="nav-item ms-2">
-          <a class="nav-link nav-cta" href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20quote%3F" target="_blank">
-            <i class="fab fa-whatsapp me-1"></i> Get a Quote
+          <a class="nav-link nav-cta"
+             href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20quote%3F"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Get a free construction quote on WhatsApp">
+            <i class="fab fa-whatsapp me-1" aria-hidden="true"></i> Get a Quote
           </a>
         </li>
       </ul>
@@ -378,114 +616,130 @@
   </div>
 </nav>
 
-<!-- ============================
+<!-- ============================================================
      HERO
-     ============================ -->
-<section id="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-accent-line"></div>
+     ============================================================ -->
+<section id="hero" aria-label="Hero — Verdesirs Consulting Inc.">
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-accent-line" aria-hidden="true"></div>
 
   <div class="container hero-content">
     <div class="row">
       <div class="col-lg-8">
-        <span class="hero-tag">Saint Lucia's Trusted Builders</span>
+        <span class="hero-tag">Based in Gros Islet · Serving All of Saint Lucia</span>
         <h1 class="hero-title">
-          Reliable Construction<br>
-          Services in <em>Saint Lucia</em>
+          Building Homes<br>
+          Saint Lucians <em>Can Be Proud Of</em>
         </h1>
-        <p class="hero-sub">We handle building, renovations, and project management from start to finish.</p>
-        <p class="hero-services-line">Residential &nbsp;•&nbsp; Commercial &nbsp;•&nbsp; Renovations</p>
+        <p class="hero-sub">
+          Verdesirs Consulting Inc. has been delivering quality residential construction,
+          renovations, and full project management across Saint Lucia for 6 years —
+          with a free site visit, a written quote before any work begins,
+          and a team that shows up every time.
+        </p>
+        <p class="hero-services-line">First Home Builds &nbsp;•&nbsp; Renovations &amp; Upgrades &nbsp;•&nbsp; Overseas Project Management</p>
         <div class="hero-btns">
-          <a href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20quote%3F" class="btn-wa" target="_blank">
-            <i class="fab fa-whatsapp"></i> Get a Quote on WhatsApp
+          <a href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20free%20quote%3F"
+             class="btn-wa" target="_blank" rel="noopener noreferrer"
+             aria-label="Get a free construction quote from Verdesirs on WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i> Get a Free Quote on WhatsApp
           </a>
-          <a href="#our-work" class="btn-ghost">View Our Work</a>
+          <a href="#our-work" class="btn-ghost" aria-label="Scroll down to view our completed projects">View Our Work</a>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="hero-scroll-indicator">
+  <div class="hero-scroll-indicator" aria-hidden="true">
     <span class="scroll-text">Scroll</span>
     <div class="scroll-line"></div>
   </div>
 </section>
 
-<!-- ============================
+<!-- ============================================================
      TRUST BAR
-     ============================ -->
-<section id="trust-bar">
+     ============================================================ -->
+<section id="trust-bar" aria-label="Why clients trust Verdesirs">
   <div class="container">
     <div class="row g-0 text-center text-lg-start">
       <div class="col-6 col-lg-3">
         <div class="trust-item justify-content-center justify-content-lg-start">
-          <div class="trust-icon"><i class="fas fa-hard-hat"></i></div>
-          <span class="trust-label">Experienced Team</span>
+          <div class="trust-icon" aria-hidden="true"><i class="fas fa-hard-hat"></i></div>
+          <span class="trust-label">6 Years Experience</span>
         </div>
       </div>
       <div class="col-6 col-lg-3">
         <div class="trust-item justify-content-center justify-content-lg-start">
-          <div class="trust-icon"><i class="fas fa-award"></i></div>
+          <div class="trust-icon" aria-hidden="true"><i class="fas fa-award"></i></div>
           <span class="trust-label">Quality Workmanship</span>
         </div>
       </div>
       <div class="col-6 col-lg-3">
         <div class="trust-item justify-content-center justify-content-lg-start">
-          <div class="trust-icon"><i class="fas fa-clock"></i></div>
-          <span class="trust-label">On-Time Completion</span>
+          <div class="trust-icon" aria-hidden="true"><i class="fas fa-file-signature"></i></div>
+          <span class="trust-label">Written Quote Guaranteed</span>
         </div>
       </div>
       <div class="col-6 col-lg-3">
         <div class="trust-item justify-content-center justify-content-lg-start">
-          <div class="trust-icon"><i class="fas fa-map-marker-alt"></i></div>
-          <span class="trust-label">Trusted Across St. Lucia</span>
+          <div class="trust-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
+          <span class="trust-label">Island-Wide Service</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================
+<!-- ============================================================
      OUR WORK
-     ============================ -->
-<section id="our-work">
+     ============================================================ -->
+<section id="our-work" aria-labelledby="our-work-heading">
   <div class="container">
     <div class="row align-items-end mb-2">
       <div class="col-lg-6 reveal">
-        <span class="section-eyebrow">Portfolio</span>
-        <h2 class="section-title">Our Work</h2>
+        <span class="section-eyebrow">Our Portfolio</span>
+        <h2 class="section-title" id="our-work-heading">Work That Speaks for Itself</h2>
         <div class="title-underline"></div>
-        <p style="color:var(--text-mid);font-size:.95rem;line-height:1.8;">Real projects completed for clients across Saint Lucia.</p>
+        <p style="color:var(--text-mid);font-size:.95rem;line-height:1.8;">
+          Projects completed across Saint Lucia — from first pours to final coats.
+          This is what quality looks like on the ground.
+        </p>
       </div>
       <div class="col-lg-6 reveal reveal-delay-1 text-lg-end">
-        <p class="projects-intro">See the quality of our construction and renovation projects</p>
+        <p class="projects-intro">Every build. Every renovation. Done right the first time.</p>
       </div>
     </div>
 
     <div class="project-grid reveal reveal-delay-2">
       <div class="project-card tall">
-        <img src="images/modern-house-project-in-the-making.webp" class="img-fluid mx-auto object-fit-cover" alt="Construction Project" loading="lazy">
+        <img src="images/modern-house-project-in-the-making.webp"
+             alt="Verdesirs Consulting Inc. new home build in progress in Gros Islet, Saint Lucia"
+             loading="lazy" width="700" height="600">
         <div class="project-overlay">
           <div>
-            <div class="project-label">Residential Build</div>
-            <span class="project-sublabel">Saint Lucia</span>
+            <div class="project-label">New Home Build</div>
+            <span class="project-sublabel">Gros Islet, Saint Lucia</span>
           </div>
         </div>
       </div>
       <div class="project-card">
-        <img src="images/almost-completed-teal-house.webp" class="mx-auto img-fluid object-fit-cover" alt="Residential Project" loading="lazy">
+        <img src="images/almost-completed-teal-house.webp"
+             alt="Residential build nearly completed in Saint Lucia by Verdesirs Consulting"
+             loading="lazy" width="400" height="320">
         <div class="project-overlay">
           <div>
             <div class="project-label">Residential Build</div>
-            <span class="project-sublabel">Saint Lucia</span>
+            <span class="project-sublabel">Gros Islet, Saint Lucia</span>
           </div>
         </div>
       </div>
       <div class="project-card">
-        <img src="images/almost-completed-house.webp" class="mx-auto img-fluid object-fit-cover" alt="Almost Completed Project" loading="lazy">
+        <img src="images/almost-completed-house.webp"
+             alt="Home in finishing stages of construction in Saint Lucia"
+             loading="lazy" width="400" height="280">
         <div class="project-overlay">
           <div>
-            <div class="project-label">Renovation</div>
+            <div class="project-label">Finishing Stage</div>
             <span class="project-sublabel">Saint Lucia</span>
           </div>
         </div>
@@ -494,186 +748,368 @@
   </div>
 </section>
 
-<!-- ============================
-     NEW HORIZONTAL SCROLL GALLERY
-     ============================ -->
-<section class="horizontal-gallery-section">
+<!-- ============================================================
+     HORIZONTAL SCROLL GALLERY
+     ============================================================ -->
+<section class="horizontal-gallery-section" aria-labelledby="gallery-heading">
   <div class="container">
     <div class="gallery-header reveal">
       <span class="section-eyebrow">Project Gallery</span>
-      <h2 class="section-title">Browse Our Recent Work</h2>
+      <h2 class="section-title" id="gallery-heading">Six Years of Work Across the Island</h2>
       <div class="title-underline"></div>
-      <p style="color: #aaa; font-size: 0.95rem;">Swipe or scroll horizontally to explore more projects</p>
+      <p style="color:var(--text-mid);font-size:0.95rem;">
+        Every project you see here was delivered on time, on budget, and with a written quote from day one.<br>
+        <small>Drag or swipe to explore more</small>
+      </p>
     </div>
 
-    <div class="gallery-scroll-container reveal reveal-delay-1" id="horizontalScrollGallery">
-      <!-- Gallery Item 1 -->
+    <div class="gallery-scroll-container reveal reveal-delay-1"
+         id="horizontalScrollGallery"
+         role="region"
+         aria-label="Scrollable project photo gallery">
       <div class="gallery-item">
-        <img src="images/first-floor-plus-top.webp" class="mx-auto img-fluid object-fit-cover" alt="First floor of house being built" loading="lazy">
-        <div class="gallery-caption"></div>
+        <img src="images/first-floor-plus-top.webp"
+             alt="First and second floor of a residential build under construction in Saint Lucia"
+             loading="lazy" width="300" height="380">
+        <div class="gallery-caption">First Floor Complete</div>
       </div>
-      <!-- Gallery Item 2 -->
       <div class="gallery-item">
-        <img src="images/use-of-crane-for-building.webp" class="mx-auto img-fluid object-fit-cover" alt="A crane being used on the roof of a construction site" loading="lazy">
-        <div class="gallery-caption"></div>
+        <img src="images/use-of-crane-for-building.webp"
+             alt="Crane being used on an active construction site in Saint Lucia"
+             loading="lazy" width="300" height="380">
+        <div class="gallery-caption">Heavy Lift — Crane Work</div>
       </div>
-      <!-- Gallery Item 3 -->
       <div class="gallery-item">
-        <img src="images/roof-works.webp" class="mx-auto img-fluid object-fit-cover" alt="Men at work on the roof on a house" loading="lazy">
-        <div class="gallery-caption"></div>
+        <img src="images/roof-works.webp"
+             alt="Verdesirs team working on roof construction in Saint Lucia"
+             loading="lazy" width="300" height="380">
+        <div class="gallery-caption">Roof Works</div>
       </div>
-      <!-- Gallery Item 4 (Additional image - reuse existing or add new) -->
       <div class="gallery-item">
-        <img src="images/full-house-frame.webp" class="mx-auto img-fluid object-fit-cover" alt="Commercial Project" loading="lazy">
-        <div class="gallery-caption"></div>
+        <img src="images/full-house-frame.webp"
+             alt="Full house frame complete on a Verdesirs construction project in Saint Lucia"
+             loading="lazy" width="300" height="380">
+        <div class="gallery-caption">Full Frame Complete</div>
       </div>
-      <!-- Gallery Item 5 -->
       <div class="gallery-item">
-        <img src="images/full-house-frame-02.webp" class="mx-auto img-fluid object-fit-cover" alt="Renovation Project" loading="lazy">
-        <div class="gallery-caption"></div>
+        <img src="images/full-house-frame-02.webp"
+             alt="Second residential frame project by Verdesirs Consulting Inc. in Saint Lucia"
+             loading="lazy" width="300" height="380">
+        <div class="gallery-caption">Structural Frame</div>
       </div>
-      <!-- Gallery Item 6 (Repeat hero image style) -->
       <div class="gallery-item">
-        <img src="images/almost-completed-teal-house.webp" class="mx-auto img-fluid object-fit-cover" alt="Teal house in the closing stages of construction" loading="lazy">
-        <div class="gallery-caption"></div>
+        <img src="images/almost-completed-teal-house.webp"
+             alt="Teal-painted home in the final stages of construction in Saint Lucia"
+             loading="lazy" width="300" height="380">
+        <div class="gallery-caption">Closing Stages</div>
       </div>
-      <!-- Gallery Item 7 -->
       <div class="gallery-item">
-        <img src="images/modern-house-project-in-the-making-02.webp" class="mx-auto img-fluid object-fit-cover" alt="Modern house project still in the making" loading="lazy">
-        <div class="gallery-caption"></div>
+        <img src="images/modern-house-project-in-the-making-02.webp"
+             alt="Modern residential construction project in progress in Saint Lucia"
+             loading="lazy" width="300" height="380">
+        <div class="gallery-caption">Modern Build — In Progress</div>
       </div>
     </div>
-    <div class="scroll-hint">
+
+    <p class="scroll-hint" aria-hidden="true">
       <i class="fas fa-arrow-left"></i> Drag to scroll <i class="fas fa-arrow-right"></i>
-    </div>
+    </p>
   </div>
 </section>
 
-<hr class="gold-divider">
+<hr class="gold-divider" aria-hidden="true">
 
-<!-- ============================
+<!-- ============================================================
      SERVICES
-     ============================ -->
-<section id="services">
+     ============================================================ -->
+<section id="services" aria-labelledby="services-heading">
   <div class="container position-relative">
     <div class="text-center mb-5 reveal">
       <span class="section-eyebrow">What We Do</span>
-      <h2 class="section-title light">Construction Services We Offer</h2>
+      <h2 class="section-title light" id="services-heading">Three Ways We Build for You</h2>
       <div class="title-underline center"></div>
     </div>
 
     <div class="row g-4">
+
+      <!-- Full Construction -->
       <div class="col-md-4 reveal reveal-delay-1">
         <div class="service-card h-100">
-          <div class="service-icon"><i class="fas fa-building"></i></div>
+          <div class="service-icon" aria-hidden="true"><i class="fas fa-building"></i></div>
           <h3 class="service-title">Full Construction</h3>
-          <p class="service-desc">Complete building services from foundation to finish.</p>
+          <h4 class="fs-6 text-white mb-3" style="font-family:inherit;font-weight:400;opacity:0.85;">
+            We Build Your Home From the Ground Up
+          </h4>
+          <p class="service-desc">
+            From permits and planning to the final coat of paint — we manage every phase of your
+            residential or commercial build. You get a written quote before a single tool is lifted,
+            a clear timeline from day one, and a team on-site you can reach on WhatsApp at any stage.
+          </p>
+          <a href="https://wa.me/17587151506?text=I%20want%20to%20build%20a%20house%20in%20Saint%20Lucia"
+             class="quote-btn mt-3 d-inline-flex align-items-center gap-2"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Start a full construction conversation with Verdesirs on WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i> Start a Build Conversation
+          </a>
         </div>
       </div>
+
+      <!-- Renovations -->
       <div class="col-md-4 reveal reveal-delay-2">
         <div class="service-card h-100">
-          <div class="service-icon"><i class="fas fa-tools"></i></div>
+          <div class="service-icon" aria-hidden="true"><i class="fas fa-tools"></i></div>
           <h3 class="service-title">Renovations &amp; Upgrades</h3>
-          <p class="service-desc">Improve and modernize your home or commercial space.</p>
+          <h4 class="fs-6 text-white mb-3" style="font-family:inherit;font-weight:400;opacity:0.85;">
+            Upgrade Your Space Without the Headache
+          </h4>
+          <p class="service-desc">
+            Whether it's a single room or a full property overhaul, we bring the same standards to
+            every renovation — detailed quote upfront, no surprise costs, quality materials, and work
+            that's done right the first time. Your home deserves better than guesswork.
+          </p>
+          <a href="https://wa.me/17587151506?text=I%20need%20a%20renovation%20quote"
+             class="quote-btn mt-3 d-inline-flex align-items-center gap-2"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Get a renovation quote from Verdesirs on WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i> Get a Renovation Quote
+          </a>
         </div>
       </div>
+
+      <!-- Project Management -->
       <div class="col-md-4 reveal reveal-delay-3">
         <div class="service-card h-100">
-          <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
+          <div class="service-icon" aria-hidden="true"><i class="fas fa-project-diagram"></i></div>
           <h3 class="service-title">Project Management</h3>
-          <p class="service-desc">We manage your project to ensure smooth, on-time delivery.</p>
+          <h4 class="fs-6 text-white mb-3" style="font-family:inherit;font-weight:400;opacity:0.85;">
+            Building Back Home? We're Your Eyes on the Ground.
+          </h4>
+          <p class="service-desc">
+            For diaspora clients and overseas property owners managing a Saint Lucia project from
+            abroad — we handle everything on the ground. Site visits, contractor coordination,
+            progress photos, and WhatsApp updates keep you fully in control no matter where you are.
+          </p>
+          <a href="https://wa.me/17587151506?text=I%20need%20help%20managing%20a%20construction%20project%20in%20Saint%20Lucia"
+             class="quote-btn mt-3 d-inline-flex align-items-center gap-2"
+             target="_blank" rel="noopener noreferrer"
+             aria-label="Discuss your project management needs with Verdesirs on WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i> Discuss Your Project
+          </a>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
+<hr class="gold-divider" aria-hidden="true">
 
- 
-<hr class="gold-divider">
+<!-- ============================================================
+     SERVICE AREAS
+     ============================================================ -->
+<section id="service-areas" class="blueprint-bg" aria-labelledby="areas-heading">
+  <div class="container">
 
-<!-- ============================
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-7 reveal">
+        <span class="section-eyebrow">Where We Work</span>
+        <h2 class="section-title light" id="areas-heading">We Build Across All of Saint Lucia</h2>
+        <div class="title-underline center"></div>
+        <p class="sa-intro">
+          Based in Gros Islet — but our work doesn't stop there. From Cap Estate in the north
+          to Vieux Fort in the south, we take on residential builds, renovations, and project
+          management across every district on the island.
+        </p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-10 reveal reveal-delay-1">
+        <ul class="sa-grid" aria-label="Communities and districts served by Verdesirs Consulting Inc." style="list-style:none;padding:0;margin:0;">
+          <li class="sa-pill"><i class="fas fa-check-circle" aria-hidden="true"></i> Gros Islet</li>
+          <li class="sa-pill"><i class="fas fa-check-circle" aria-hidden="true"></i> Rodney Bay</li>
+          <li class="sa-pill"><i class="fas fa-check-circle" aria-hidden="true"></i> Cap Estate</li>
+          <li class="sa-pill"><i class="fas fa-check-circle" aria-hidden="true"></i> Castries</li>
+          <li class="sa-pill"><i class="fas fa-check-circle" aria-hidden="true"></i> Bois d'Orange</li>
+          <li class="sa-pill"><i class="fas fa-check-circle" aria-hidden="true"></i> Babonneau</li>
+          <li class="sa-pill"><i class="fas fa-check-circle" aria-hidden="true"></i> Anse la Raye</li>
+          <li class="sa-pill"><i class="fas fa-check-circle" aria-hidden="true"></i> Canaries</li>
+          <li class="sa-pill"><i class="fas fa-check-circle" aria-hidden="true"></i> Soufrière</li>
+          <li class="sa-pill"><i class="fas fa-check-circle" aria-hidden="true"></i> Choiseul</li>
+          <li class="sa-pill"><i class="fas fa-check-circle" aria-hidden="true"></i> Laborie</li>
+          <li class="sa-pill"><i class="fas fa-check-circle" aria-hidden="true"></i> Micoud</li>
+          <li class="sa-pill"><i class="fas fa-check-circle" aria-hidden="true"></i> Dennery</li>
+          <li class="sa-pill"><i class="fas fa-check-circle" aria-hidden="true"></i> Vieux Fort</li>
+          <li class="sa-pill"><i class="fas fa-check-circle" aria-hidden="true"></i> Augier</li>
+          <li class="sa-pill sa-pill--all"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> All of Saint Lucia</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8 text-center reveal reveal-delay-2">
+        <p class="sa-check-text">Not sure if we cover your area?</p>
+        <a href="https://wa.me/17587151506?text=Hi%2C%20I%20want%20to%20confirm%20if%20you%20cover%20construction%20projects%20in%20my%20area."
+           target="_blank" rel="noopener noreferrer"
+           class="sa-check-btn"
+           aria-label="Message Verdesirs on WhatsApp to confirm service coverage in your area">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i> Message Us — We Respond Within the Hour
+        </a>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="sa-divider" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-10 reveal reveal-delay-2">
+        <div class="sa-diaspora">
+          <div class="sa-diaspora-badge" aria-hidden="true">
+            <i class="fas fa-globe-americas"></i>
+          </div>
+          <div class="sa-diaspora-body">
+            <span class="sa-diaspora-label">Overseas? No Problem.</span>
+            <h3 class="sa-diaspora-title">
+              Building Back Home From the UK, US, or Canada?<br>
+              <em>We Are Your Boots on the Ground.</em>
+            </h3>
+            <p class="sa-diaspora-text">
+              Managing a Saint Lucia construction project from abroad is stressful when you can't
+              be there to see it yourself. We handle everything on the ground — site visits,
+              contractor coordination, permits, and purchasing. You get regular WhatsApp photo
+              updates and stay fully in control of every decision, no matter where in the world you are.
+            </p>
+            <a href="https://wa.me/17587151506?text=Hi%2C%20I%20am%20based%20overseas%20and%20I%20need%20help%20managing%20a%20construction%20project%20in%20Saint%20Lucia."
+               target="_blank" rel="noopener noreferrer"
+               class="btn-wa sa-diaspora-cta"
+               aria-label="Overseas property owners — contact Verdesirs on WhatsApp to discuss your Saint Lucia project">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i> Let's Talk About Your Project
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="gold-divider" aria-hidden="true">
+
+<!-- ============================================================
      WHY US
-     ============================ -->
-<section id="why-us" class="construction-bg">
+     ============================================================ -->
+<section id="why-us" class="construction-bg" aria-labelledby="why-us-heading">
   <div class="container">
     <div class="text-center mb-5 reveal">
       <span class="section-eyebrow">Our Difference</span>
-      <h2 class="section-title">Why Clients Choose Us</h2>
+      <h2 class="section-title" id="why-us-heading">Why Clients Choose Us</h2>
       <div class="title-underline center"></div>
-      <p style="max-width:520px;margin:0 auto;color:var(--text-mid);font-size:.95rem;line-height:1.8;">We focus on delivering reliable construction services with clear communication and consistent results.</p>
+      <p style="max-width:540px;margin:0 auto;color:var(--text-mid);font-size:.95rem;line-height:1.8;">
+        Every contractor on the island will tell you they're reliable. Here is what we actually do differently.
+      </p>
     </div>
 
     <div class="row g-4">
       <div class="col-sm-6 col-lg-3 reveal reveal-delay-1">
         <div class="why-card">
-          <div class="why-number">01</div>
+          <div class="why-number" aria-hidden="true">01</div>
           <div class="why-title">Island-Wide Service</div>
-          <p class="why-desc">Serving clients across Saint Lucia</p>
+          <p class="why-desc">
+            From Cap Estate to Vieux Fort — we serve every district in Saint Lucia.
+            Local or diaspora, your project location is never a barrier.
+          </p>
         </div>
       </div>
       <div class="col-sm-6 col-lg-3 reveal reveal-delay-2">
         <div class="why-card">
-          <div class="why-number">02</div>
-          <div class="why-title">Fast Response</div>
-          <p class="why-desc">Fast response time on all inquiries</p>
+          <div class="why-number" aria-hidden="true">02</div>
+          <div class="why-title">Responds Within the Hour</div>
+          <p class="why-desc">
+            Message us on WhatsApp and get a real response fast — not an automated reply.
+            We know delays cost you money, so we don't keep you waiting.
+          </p>
         </div>
       </div>
       <div class="col-sm-6 col-lg-3 reveal reveal-delay-3">
         <div class="why-card">
-          <div class="why-number">03</div>
-          <div class="why-title">Reliable Team</div>
-          <p class="why-desc">Experienced and reliable construction team</p>
+          <div class="why-number" aria-hidden="true">03</div>
+          <div class="why-title">A Team That Shows Up</div>
+          <p class="why-desc">
+            We turn up, we follow through, and we finish what we start.
+            Our clients — both local and overseas — count on us to be present
+            and accountable on every project.
+          </p>
         </div>
       </div>
       <div class="col-sm-6 col-lg-3 reveal reveal-delay-4">
         <div class="why-card">
-          <div class="why-number">04</div>
-          <div class="why-title">Transparent Pricing</div>
-          <p class="why-desc">Clear and Transparent Pricing</p>
+          <div class="why-number" aria-hidden="true">04</div>
+          <div class="why-title">No Surprises on Price</div>
+          <p class="why-desc">
+            You receive a written quote before any work begins — no verbal estimates,
+            no hidden costs, no renegotiating mid-project. What we quote is what you pay.
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================
+<!-- ============================================================
      PROCESS
-     ============================ -->
-<section id="process">
+     ============================================================ -->
+<section id="process" aria-labelledby="process-heading">
   <div class="container">
     <div class="row align-items-center g-5">
       <div class="col-lg-6 reveal">
-        <span class="section-eyebrow">Simple Steps</span>
-        <h2 class="section-title">How It Works</h2>
+        <span class="section-eyebrow">How It Works</span>
+        <h2 class="section-title" id="process-heading">Three Steps to Your Build</h2>
         <div class="title-underline"></div>
 
         <div class="process-step">
-          <div class="step-number">1</div>
+          <div class="step-number" aria-hidden="true">1</div>
           <div class="step-content">
-            <div class="step-title">Send Your Request</div>
-            <p class="step-desc">Message us with details about your project.</p>
+            <div class="step-title">Tell Us About Your Project</div>
+            <p class="step-desc">
+              Send us a WhatsApp message with a brief description — size, location, what you need.
+              We'll ask the right questions to fully understand your scope.
+            </p>
           </div>
         </div>
+
         <div class="process-step">
-          <div class="step-number">2</div>
+          <div class="step-number" aria-hidden="true">2</div>
           <div class="step-content">
-            <div class="step-title">Get a Quote</div>
-            <p class="step-desc">We review and provide a clear estimate.</p>
+            <div class="step-title">Free Site Visit &amp; Written Quote</div>
+            <p class="step-desc">
+              We come to you — free of charge. After assessing the site,
+              you receive a clear, itemized written quote. No work starts until you approve it.
+            </p>
           </div>
         </div>
+
         <div class="process-step">
-          <div class="step-number">3</div>
+          <div class="step-number" aria-hidden="true">3</div>
           <div class="step-content">
-            <div class="step-title">Start Your Project</div>
-            <p class="step-desc">We handle the work from start to completion</p>
+            <div class="step-title">We Build — You Stay Informed</div>
+            <p class="step-desc">
+              Our team handles everything from start to completion.
+              You get regular progress updates via WhatsApp — whether you're down the road
+              or overseas — so you're always in the loop.
+            </p>
           </div>
         </div>
       </div>
+
       <div class="col-lg-6 reveal reveal-delay-2">
         <div class="process-visual">
-          <img src="images/construction-process-images.webp" class="mx-auto img-fluid object-fit-cover" alt="Construction Process with workers" loading="lazy">
-          <div class="process-visual-badge">
+          <img src="images/construction-process-images.webp"
+               alt="Verdesirs Consulting Inc. team working on an active construction site in Saint Lucia"
+               loading="lazy" class="mx-auto img-fluid object-fit-cover" width="600" height="480">
+          <div class="process-visual-badge" aria-hidden="true">
             <div class="pv-badge-num">3</div>
             <div class="pv-badge-label">Simple Steps</div>
           </div>
@@ -683,67 +1119,282 @@
   </div>
 </section>
 
-<!-- ============================
-     CTA QUOTE SECTION
-     ============================ -->
-<section id="quote-cta">
-  <div class="container position-relative">
-    <div class="text-center reveal">
-      <span class="section-eyebrow">Start Today</span>
-      <h2 class="cta-title">Request a Quote in Seconds</h2>
-      <p class="cta-sub mx-auto">Choose your service and send your request directly on WhatsApp.</p>
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
+<section id="faq" class="construction-bg" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-eyebrow">Got Questions?</span>
+      <h2 class="section-title" id="faq-heading">Frequently Asked Questions</h2>
+      <div class="title-underline center"></div>
+      <p style="max-width:540px;margin:0 auto;color:var(--text-mid);font-size:.95rem;line-height:1.8;">
+        Everything you need to know before starting your construction project in Saint Lucia.
+      </p>
+    </div>
 
-      <div>
-        <a href="https://wa.me/17587151506?text=I%20want%20to%20build%20a%20house%20in%20Saint%20Lucia" class="quote-btn" target="_blank">
-          <i class="fab fa-whatsapp"></i> Build a House
-        </a>
-        <a href="https://wa.me/17587151506?text=I%20need%20a%20renovation%20quote" class="quote-btn" target="_blank">
-          <i class="fab fa-whatsapp"></i> Renovation Quote
-        </a>
-        <a href="https://wa.me/17587151506?text=I%20need%20help%20managing%20a%20construction%20project" class="quote-btn" target="_blank">
-          <i class="fab fa-whatsapp"></i> Project Management
-        </a>
+    <div class="row justify-content-center">
+      <div class="col-lg-9 reveal reveal-delay-1">
+        <div class="accordion accordion-flush faq-accordion" id="faqAccordion">
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#faq1"
+                      aria-expanded="false" aria-controls="faq1"
+                      aria-label="Do you offer construction services across all of Saint Lucia?">
+                Do you offer construction services across all of Saint Lucia?
+              </button>
+            </h3>
+            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes — we are based in Gros Islet and serve every district in Saint Lucia,
+                including Castries, Micoud, Vieux Fort, Soufrière, Dennery, Laborie, Choiseul,
+                Anse la Raye, Canaries, and all surrounding communities. No project is too far.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#faq2"
+                      aria-expanded="false" aria-controls="faq2"
+                      aria-label="How much does construction cost in Saint Lucia?">
+                How much does construction cost in Saint Lucia?
+              </button>
+            </h3>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Costs vary based on project size, materials, site conditions, and scope.
+                A full residential build is priced differently from a renovation or upgrade.
+                We provide detailed, written quotes at no obligation — message us on WhatsApp
+                and we will assess your needs and give you a clear estimate.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#faq3"
+                      aria-expanded="false" aria-controls="faq3"
+                      aria-label="Do you offer a free site visit before giving a quote?">
+                Do you offer a free site visit before giving a quote?
+              </button>
+            </h3>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes. Every project starts with a free site visit and consultation at no charge.
+                After assessing your site, we provide a written, itemized quote.
+                No work begins until you have that quote in hand and have approved it.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#faq4"
+                      aria-expanded="false" aria-controls="faq4"
+                      aria-label="What construction services does Verdesirs offer?">
+                What construction services does Verdesirs offer?
+              </button>
+            </h3>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                We offer full residential construction, commercial construction, renovations and
+                upgrades, and end-to-end project management across all of Saint Lucia.
+                Whether you're building from the ground up or modernizing an existing space,
+                we handle every phase from foundation to finishing touches.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#faq5"
+                      aria-expanded="false" aria-controls="faq5"
+                      aria-label="How long does a construction project take in Saint Lucia?">
+                How long does a construction project take in Saint Lucia?
+              </button>
+            </h3>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Timelines depend on scope and complexity. A renovation may take a few weeks,
+                while a full residential build typically spans several months. We provide a clear
+                project schedule from day one and send you regular updates throughout
+                so there are no surprises on timing.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#faq6"
+                      aria-expanded="false" aria-controls="faq6"
+                      aria-label="Do you handle building permits and planning approvals in Saint Lucia?">
+                Do you handle building permits and planning approvals?
+              </button>
+            </h3>
+            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes. We guide you through the full permitting and planning approval process
+                in Saint Lucia. As your construction partner, we ensure your project meets all
+                requirements set by local authorities before a single tool hits the ground.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#faq7"
+                      aria-expanded="false" aria-controls="faq7"
+                      aria-label="Can you manage my Saint Lucia construction project if I am overseas?">
+                Can you manage my project if I am overseas?
+              </button>
+            </h3>
+            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Absolutely. We work with diaspora clients and overseas property owners regularly.
+                We handle everything on the ground — site visits, contractor coordination, permits,
+                and purchasing — and keep you informed with regular WhatsApp photo updates.
+                You stay fully in control of every decision no matter where in the world you are.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#faq8"
+                      aria-expanded="false" aria-controls="faq8"
+                      aria-label="Why should I choose Verdesirs Consulting Inc. for my construction project?">
+                Why should I choose Verdesirs Consulting Inc.?
+              </button>
+            </h3>
+            <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                We are a Saint Lucia-rooted company with 6 years of experience delivering residential
+                and commercial projects island-wide. We offer a free site visit, a written quote before
+                work begins, transparent pricing, fast WhatsApp communication, and a team that shows
+                up every single time. Our clients — local and overseas — trust us because we earn it
+                on every project.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-5 reveal">
+          <p style="color:var(--text-mid);font-size:.9rem;margin-bottom:1.25rem;">
+            Don't see your question? Ask us directly.
+          </p>
+          <a href="https://wa.me/17587151506?text=Hi%2C%20I%20have%20a%20question%20about%20a%20construction%20project%20in%20Saint%20Lucia."
+             target="_blank" rel="noopener noreferrer"
+             class="btn-wa" style="font-size:.85rem;padding:12px 28px;"
+             aria-label="Send Verdesirs a question on WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i> Ask on WhatsApp
+          </a>
+        </div>
+
       </div>
-
-      <p class="cta-note">We respond quickly to all inquiries.</p>
     </div>
   </div>
 </section>
 
-<!-- ============================
+<!-- ============================================================
+     CTA — QUOTE SECTION
+     ============================================================ -->
+<section id="quote-cta" aria-labelledby="cta-heading">
+  <div class="container position-relative">
+    <div class="text-center reveal">
+      <span class="section-eyebrow">Start Today</span>
+      <h2 class="cta-title" id="cta-heading">Get a Free Quote in Minutes</h2>
+      <p class="cta-sub mx-auto">
+        Choose your service and send your request directly on WhatsApp.
+        We respond within the hour.
+      </p>
+
+      <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+        <a href="https://wa.me/17587151506?text=I%20want%20to%20build%20a%20house%20in%20Saint%20Lucia"
+           class="quote-btn" target="_blank" rel="noopener noreferrer"
+           aria-label="Request a quote to build a house in Saint Lucia on WhatsApp">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i> Build a House
+        </a>
+        <a href="https://wa.me/17587151506?text=I%20need%20a%20renovation%20quote%20in%20Saint%20Lucia"
+           class="quote-btn" target="_blank" rel="noopener noreferrer"
+           aria-label="Request a renovation quote in Saint Lucia on WhatsApp">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i> Renovation Quote
+        </a>
+        <a href="https://wa.me/17587151506?text=I%20need%20help%20managing%20a%20construction%20project%20in%20Saint%20Lucia"
+           class="quote-btn" target="_blank" rel="noopener noreferrer"
+           aria-label="Get help managing a construction project in Saint Lucia on WhatsApp">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i> Project Management
+        </a>
+      </div>
+
+      <p class="cta-note">Free site visit included. Written quote before work begins. No obligations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
      ABOUT
-     ============================ -->
-<section id="about">
+     ============================================================ -->
+<section id="about" aria-labelledby="about-heading">
   <div class="container">
     <div class="row align-items-center g-5">
       <div class="col-lg-5 reveal">
         <div class="about-image-wrap">
-          <img src="images/construction-progress.webp" alt="About Verdesirs Images" class="img-fluid mx-auto object-fit-cover about-img-main" loading="lazy">
-          <div class="about-badge">
-            <div class="about-badge-num">VD</div>
-            <div class="about-badge-label">Verdesirs Consulting Inc.</div>
+          <img src="images/construction-progress.webp"
+               alt="Verdesirs Consulting Inc. team on an active construction site in Saint Lucia"
+               class="img-fluid mx-auto object-fit-cover about-img-main"
+               loading="lazy" width="520" height="600">
+          <div class="about-badge" aria-hidden="true">
+            <div class="about-badge-num">6+</div>
+            <div class="about-badge-label">Years Building Saint Lucia</div>
           </div>
-          <img src="images/verdesirs-logo-hd.webp" alt="Project Logo Image" class="mx-auto img-fluid object-fit-cover about-img-accent" loading="lazy">
+          <img src="images/verdesirs-logo-hd.webp"
+               alt="Verdesirs Consulting Inc. logo"
+               class="mx-auto img-fluid object-fit-cover about-img-accent"
+               loading="lazy" width="120" height="120">
         </div>
       </div>
 
       <div class="col-lg-7 reveal reveal-delay-2">
         <div class="about-text">
           <span class="section-eyebrow">About Us</span>
-          <h2 class="section-title">Verdesirs Consulting Inc.</h2>
+          <h2 class="section-title" id="about-heading">Verdesirs Consulting Inc.</h2>
           <div class="title-underline"></div>
 
-          <p>Verdesirs Consulting Inc. is a full-service construction company proudly rooted in Saint Lucia. We bring together experienced professionals, quality materials, and a commitment to excellence on every project we undertake — from foundations to finishing touches.</p>
+          <p>
+            Verdesirs Consulting Inc. is a full-service construction company proudly rooted in
+            Saint Lucia. For over 6 years, we have brought together experienced professionals,
+            quality materials, and a relentless commitment to doing the job right —
+            from the first foundation pour to the final finishing touches.
+          </p>
 
-          <p>Whether you're building your dream home, upgrading a commercial space, or need a trusted partner to manage your construction project end to end, Verdesirs delivers results with transparency and dedication.</p>
+          <p>
+            Whether you're building your first home, upgrading a commercial space, or managing a
+            project from overseas, we deliver results with one non-negotiable standard:
+            you get a written quote before work begins, a team that communicates clearly,
+            and a build you can stand behind.
+          </p>
 
-          <p>We are not just builders — we are your partners in bringing ideas to life across the beautiful island of Saint Lucia.</p>
+          <p>
+            We are Saint Lucian-built, island-committed, and here for the long run.
+            Every home we complete is a stake in the ground for what this island deserves.
+          </p>
 
           <div class="about-values">
-            <div class="about-value"><i class="fas fa-check-circle"></i> Quality First</div>
-            <div class="about-value"><i class="fas fa-check-circle"></i> Client-Focused</div>
-            <div class="about-value"><i class="fas fa-check-circle"></i> Island Built</div>
-            <div class="about-value"><i class="fas fa-check-circle"></i> Transparent Pricing</div>
+            <div class="about-value"><i class="fas fa-check-circle" aria-hidden="true"></i> Quality First</div>
+            <div class="about-value"><i class="fas fa-check-circle" aria-hidden="true"></i> Client-Focused</div>
+            <div class="about-value"><i class="fas fa-check-circle" aria-hidden="true"></i> Island Built</div>
+            <div class="about-value"><i class="fas fa-check-circle" aria-hidden="true"></i> Transparent Pricing</div>
           </div>
         </div>
       </div>
@@ -751,80 +1402,113 @@
   </div>
 </section>
 
-<!-- ============================
+<!-- ============================================================
      FOOTER
-     ============================ -->
-<footer>
+     ============================================================ -->
+<footer role="contentinfo">
   <div class="footer-top">
     <div class="container">
       <div class="row g-5">
 
-        <!-- Brand Col -->
         <div class="col-lg-4">
           <div class="footer-brand-logo">
-            <img src="images/verdesirs-logo-hd.webp" class="img-fluid mx-auto object-fit-cover rounded-pill" loading="lazy" alt="Verdesirs Logo">
+            <img src="images/verdesirs-logo-hd.webp"
+                 alt="Verdesirs Consulting Inc. logo"
+                 loading="lazy" width="80" height="80"
+                 class="img-fluid mx-auto object-fit-cover rounded-pill">
           </div>
           <div class="footer-brand-name">VERDESIRS</div>
           <div class="footer-brand-sub">Consulting Inc. — Saint Lucia</div>
-          <p class="footer-about">Verdesirs Consulting Inc. is a trusted full-service construction company serving clients across Saint Lucia. From residential builds to commercial renovations, we deliver quality work with integrity.</p>
+          <p class="footer-about">
+            A trusted, full-service construction company serving every district of Saint Lucia.
+            Residential builds, renovations, and project management — delivered with integrity,
+            transparency, and 6 years of island-wide experience.
+          </p>
           <div class="social-links mt-4">
-            <a href="https://www.instagram.com/verdesirs_consulting_inc" target="_blank" class="social-link" title="Instagram">
-              <i class="fab fa-instagram"></i>
+            <a href="https://www.instagram.com/verdesirs_consulting_inc"
+               target="_blank" rel="noopener noreferrer"
+               class="social-link"
+               aria-label="Visit Verdesirs Consulting Inc. on Instagram">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
             </a>
-            <a href="https://wa.me/17587151506" target="_blank" class="social-link wa" title="WhatsApp">
-              <i class="fab fa-whatsapp"></i>
+            <a href="https://wa.me/17587151506"
+               target="_blank" rel="noopener noreferrer"
+               class="social-link wa"
+               aria-label="Chat with Verdesirs Consulting Inc. on WhatsApp">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
             </a>
           </div>
         </div>
 
-        <!-- Quick Links -->
         <div class="col-sm-6 col-lg-2">
           <h4 class="footer-heading">Quick Links</h4>
           <ul class="footer-links">
-            <li><a href="#our-work">Our Work</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#why-us">Why Us</a></li>
-            <li><a href="#process">How It Works</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#our-work" aria-label="View our portfolio of completed projects">Our Work</a></li>
+            <li><a href="#services" aria-label="View our construction services">Services</a></li>
+            <li><a href="#service-areas" aria-label="See areas we serve in Saint Lucia">Areas We Serve</a></li>
+            <li><a href="#why-us" aria-label="Why clients choose Verdesirs">Why Us</a></li>
+            <li><a href="#process" aria-label="See how our process works">How It Works</a></li>
+            <li><a href="#faq" aria-label="Read frequently asked questions">FAQ</a></li>
+            <li><a href="#about" aria-label="About Verdesirs Consulting Inc.">About</a></li>
           </ul>
         </div>
 
-        <!-- Services -->
         <div class="col-sm-6 col-lg-2">
           <h4 class="footer-heading">Services</h4>
           <ul class="footer-links">
-            <li><a href="https://wa.me/17587151506?text=I%20want%20to%20build%20a%20house%20in%20Saint%20Lucia" target="_blank">Build a House</a></li>
-            <li><a href="https://wa.me/17587151506?text=I%20need%20a%20renovation%20quote" target="_blank">Renovations</a></li>
-            <li><a href="https://wa.me/17587151506?text=I%20need%20help%20managing%20a%20construction%20project" target="_blank">Project Management</a></li>
+            <li>
+              <a href="https://wa.me/17587151506?text=I%20want%20to%20build%20a%20house%20in%20Saint%20Lucia"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Get a quote to build a house in Saint Lucia">Build a House</a>
+            </li>
+            <li>
+              <a href="https://wa.me/17587151506?text=I%20need%20a%20renovation%20quote"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Get a renovation quote in Saint Lucia">Renovations</a>
+            </li>
+            <li>
+              <a href="https://wa.me/17587151506?text=I%20need%20help%20managing%20a%20construction%20project"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Get help managing a construction project in Saint Lucia">Project Management</a>
+            </li>
           </ul>
         </div>
 
-        <!-- Contact -->
         <div class="col-lg-4">
           <h4 class="footer-heading">Contact Us</h4>
 
           <div class="footer-contact-item">
-            <div class="footer-contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div class="footer-contact-text">Saint Lucia, West Indies</div>
-          </div>
-
-          <div class="footer-contact-item">
-            <div class="footer-contact-icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="footer-contact-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
             <div class="footer-contact-text">
-              <a href="https://wa.me/17587151506" target="_blank">+1 (758) 715-1506</a>
+              <strong>Gros Islet, Saint Lucia</strong><br>
+              <span style="font-size:0.8rem;opacity:0.7;">Serving all districts island-wide</span>
             </div>
           </div>
 
           <div class="footer-contact-item">
-            <div class="footer-contact-icon"><i class="fab fa-instagram"></i></div>
+            <div class="footer-contact-icon" aria-hidden="true"><i class="fab fa-whatsapp"></i></div>
             <div class="footer-contact-text">
-              <a href="https://www.instagram.com/verdesirs_consulting_inc" target="_blank">@verdesirs_consulting_inc</a>
+              <a href="https://wa.me/17587151506"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Call or WhatsApp Verdesirs at +1 758 715-1506">+1 (758) 715-1506</a>
+            </div>
+          </div>
+
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon" aria-hidden="true"><i class="fab fa-instagram"></i></div>
+            <div class="footer-contact-text">
+              <a href="https://www.instagram.com/verdesirs_consulting_inc"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Follow Verdesirs Consulting Inc. on Instagram">@verdesirs_consulting_inc</a>
             </div>
           </div>
 
           <div class="mt-4">
-            <a href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20quote%3F" target="_blank" class="btn-wa" style="font-size:.82rem;padding:12px 24px;">
-              <i class="fab fa-whatsapp"></i> Get a Free Quote
+            <a href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20free%20quote%3F"
+               target="_blank" rel="noopener noreferrer"
+               class="btn-wa" style="font-size:.82rem;padding:12px 24px;"
+               aria-label="Get a free construction quote from Verdesirs on WhatsApp">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i> Get a Free Quote
             </a>
           </div>
         </div>
@@ -832,40 +1516,49 @@
       </div>
     </div>
   </div>
-
-  <div class="container">
-    <div class="footer-bottom">
-      <p class="footer-copy">© 2025 Verdesirs Consulting Inc. All rights reserved. • Saint Lucia</p>
-      <div class="footer-legal">
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms-of-service.html">Terms of Service</a>
+     
+<div class="container">
+  <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2 text-primary">
+     <div>
+        <p id="footer-year footer-copy">© 2025 Verdesirs Consulting Inc. All rights reserved. · Gros Islet, Saint Lucia.</p>
+        <div class="footer-legal">
+          <a href="legal.html#do-not-sell">Do Not Sell or Share My Personal Information</a>
+          &nbsp;·&nbsp;
+          <a href="legal.html">Privacy Policy &amp; Terms</a>
+        </div>
       </div>
+      <span style="opacity:.45">Built with care for small businesses.</span>
     </div>
   </div>
+</div>
+     
 </footer>
 
-<!-- ============================
+<!-- ============================================================
      WHATSAPP FLOATER
-     ============================ -->
-<div class="wa-float">
-  <a href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20quote%3F" target="_blank" class="wa-float-btn">
-    <i class="fab fa-whatsapp"></i>
+     ============================================================ -->
+<div class="wa-float" role="complementary" aria-label="WhatsApp quick contact">
+  <a href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20quote%3F"
+     target="_blank" rel="noopener noreferrer"
+     class="wa-float-btn"
+     aria-label="Open WhatsApp to chat with Verdesirs Consulting Inc.">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
   </a>
-  <div class="wa-float-tooltip">Chat with us on WhatsApp</div>
+  <div class="wa-float-tooltip" aria-hidden="true">Chat with us on WhatsApp</div>
 </div>
 
-<!-- ============================
+<!-- ============================================================
      SCRIPTS
-     ============================ -->
+     ============================================================ -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
   // Navbar scroll effect
   const nav = document.getElementById('mainNav');
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 60);
-  });
+  }, { passive: true });
 
-  // Scroll reveal
+  // Scroll reveal — IntersectionObserver
   const reveals = document.querySelectorAll('.reveal');
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -875,15 +1568,12 @@
       }
     });
   }, { threshold: 0.12 });
-
   reveals.forEach(el => revealObserver.observe(el));
 
-  // Optional: Drag to scroll functionality for the gallery
+  // Drag-to-scroll gallery
   const scrollContainer = document.getElementById('horizontalScrollGallery');
   if (scrollContainer) {
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+    let isDown = false, startX, scrollLeft;
 
     scrollContainer.addEventListener('mousedown', (e) => {
       isDown = true;
@@ -891,24 +1581,25 @@
       startX = e.pageX - scrollContainer.offsetLeft;
       scrollLeft = scrollContainer.scrollLeft;
     });
-
-    scrollContainer.addEventListener('mouseleave', () => {
-      isDown = false;
-      scrollContainer.style.cursor = 'grab';
-    });
-
-    scrollContainer.addEventListener('mouseup', () => {
-      isDown = false;
-      scrollContainer.style.cursor = 'grab';
-    });
-
+    scrollContainer.addEventListener('mouseleave', () => { isDown = false; scrollContainer.style.cursor = 'grab'; });
+    scrollContainer.addEventListener('mouseup', () => { isDown = false; scrollContainer.style.cursor = 'grab'; });
     scrollContainer.addEventListener('mousemove', (e) => {
       if (!isDown) return;
       e.preventDefault();
       const x = e.pageX - scrollContainer.offsetLeft;
-      const walk = (x - startX) * 1.5;
-      scrollContainer.scrollLeft = scrollLeft - walk;
+      scrollContainer.scrollLeft = scrollLeft - (x - startX) * 1.5;
     });
+
+    // Touch support for mobile
+    let touchStartX = 0, touchScrollLeft = 0;
+    scrollContainer.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].pageX;
+      touchScrollLeft = scrollContainer.scrollLeft;
+    }, { passive: true });
+    scrollContainer.addEventListener('touchmove', (e) => {
+      const dx = touchStartX - e.touches[0].pageX;
+      scrollContainer.scrollLeft = touchScrollLeft + dx;
+    }, { passive: true });
   }
 </script>
 
