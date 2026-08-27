@@ -5,6 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- ============================================================
+     SECURITY HEADERS (security.txt Section 1 — mandatory)
+     ============================================================ -->
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
+               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
+               font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+               img-src 'self' data: https:;
+               connect-src 'self';
+               object-src 'none';
+               base-uri 'self';
+               form-action 'self';">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy"
+      content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()">
+<meta name="theme-color" content="#0d1b2e">
+
+<!-- ============================================================
      PRIMARY SEO META
      ============================================================ -->
 <title>Verdesirs Consulting Inc. | Construction Company in Saint Lucia</title>
@@ -25,7 +44,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Verdesirs Consulting Inc. — Construction Company in Saint Lucia">
-<meta property="og:locale" content="en_LC">
+<meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Verdesirs Consulting Inc.">
 
 <!-- ============================================================
@@ -47,8 +66,11 @@
 <!-- ============================================================
      FAVICON
      ============================================================ -->
-<link rel="icon" type="image/webp" href="images/verdesirs-logo-hd.webp">
-<link rel="apple-touch-icon" href="images/verdesirs-logo-hd.webp">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 
 <!-- ============================================================
      PRECONNECT — PERFORMANCE
@@ -60,15 +82,55 @@
 <!-- ============================================================
      CSS DEPENDENCIES
      ============================================================ -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+      media="print" onload="this.media='all'">
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
+</noscript>
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      media="print" onload="this.media='all'">
 <link rel="stylesheet" href="css/style.css">
 
 <!-- ============================================================
      PAGE-LEVEL STYLES
      ============================================================ -->
 <style>
+
+/* ===== ACCESSIBILITY BASE (WCAG 2.1 AA) — added because css/style.css
+   coverage of these rules could not be verified during this audit ===== */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--navy, #0d1b2e);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 4px 4px;
+  z-index: 9999;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
+}
+*:focus-visible {
+  outline: 3px solid var(--gold, #c9a84c);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+*:focus:not(:focus-visible) {
+  outline: none;
+}
 
 /* ===== HERO BUTTON FIX ===== */
 .hero-btns {
@@ -574,6 +636,9 @@
 
 <body>
 
+<!-- Skip to main content — WCAG 2.1 AA keyboard accessibility requirement -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <!-- ============================================================
      NAVBAR
      ============================================================ -->
@@ -581,7 +646,7 @@
   <div class="container">
     <a class="navbar-brand" href="index.html" aria-label="Verdesirs Consulting Inc. — Go to homepage">
       <div class="nav-logo-circle">
-        <img src="images/verdesirs-logo-hd.webp" alt="Verdesirs Consulting Inc. logo" loading="eager" width="46" height="46">
+        <img src="images/verdesirs-logo-hd.webp" alt="Verdesirs Consulting Inc. logo" loading="eager" decoding="sync" width="46" height="46" onerror="this.style.display='none'">
       </div>
       <div>
         <span class="brand-text-top">VERDESIRS</span>
@@ -615,6 +680,8 @@
     </div>
   </div>
 </nav>
+
+<main id="main-content" role="main">
 
 <!-- ============================================================
      HERO
@@ -713,7 +780,7 @@
       <div class="project-card tall">
         <img src="images/modern-house-project-in-the-making.webp"
              alt="Verdesirs Consulting Inc. new home build in progress in Gros Islet, Saint Lucia"
-             loading="lazy" width="700" height="600">
+             loading="lazy" decoding="async" width="700" height="600" onerror="this.style.display='none'">
         <div class="project-overlay">
           <div>
             <div class="project-label">New Home Build</div>
@@ -724,7 +791,7 @@
       <div class="project-card">
         <img src="images/almost-completed-teal-house.webp"
              alt="Residential build nearly completed in Saint Lucia by Verdesirs Consulting"
-             loading="lazy" width="400" height="320">
+             loading="lazy" decoding="async" width="400" height="320" onerror="this.style.display='none'">
         <div class="project-overlay">
           <div>
             <div class="project-label">Residential Build</div>
@@ -735,7 +802,7 @@
       <div class="project-card">
         <img src="images/almost-completed-house.webp"
              alt="Home in finishing stages of construction in Saint Lucia"
-             loading="lazy" width="400" height="280">
+             loading="lazy" decoding="async" width="400" height="280" onerror="this.style.display='none'">
         <div class="project-overlay">
           <div>
             <div class="project-label">Finishing Stage</div>
@@ -770,73 +837,73 @@
       <div class="gallery-item">
         <img src="images/foundation-work.webp"
              alt="Ground and foundation under construction in Saint Lucia"
-             loading="lazy" width="300" height="380">
+             loading="lazy" decoding="async" width="300" height="380" onerror="this.style.display='none'">
         <div class="gallery-caption">Foundation Work Images</div>
       </div>
       <div class="gallery-item">
         <img src="images/first-floor-plus-top.webp"
              alt="First and second floor of a residential build under construction in Saint Lucia"
-             loading="lazy" width="300" height="380">
+             loading="lazy" decoding="async" width="300" height="380" onerror="this.style.display='none'">
         <div class="gallery-caption">First Floor Complete</div>
       </div>
       <div class="gallery-item">
         <img src="images/use-of-crane-for-building.webp"
              alt="Crane being used on an active construction site in Saint Lucia"
-             loading="lazy" width="300" height="380">
+             loading="lazy" decoding="async" width="300" height="380" onerror="this.style.display='none'">
         <div class="gallery-caption">Heavy Lift - Crane Work</div>
       </div>
       <div class="gallery-item">
         <img src="images/roof-works.webp"
              alt="Verdesirs team working on roof construction in Saint Lucia"
-             loading="lazy" width="300" height="380">
+             loading="lazy" decoding="async" width="300" height="380" onerror="this.style.display='none'">
         <div class="gallery-caption">Roof Works</div>
       </div>
       <div class="gallery-item">
         <img src="images/full-house-frame.webp"
              alt="Full house frame complete on a Verdesirs construction project in Saint Lucia"
-             loading="lazy" width="300" height="380">
+             loading="lazy" decoding="async" width="300" height="380" onerror="this.style.display='none'">
         <div class="gallery-caption">Full Frame Complete</div>
       </div>
       <div class="gallery-item">
         <img src="images/full-house-frame-02.webp"
              alt="Second residential frame project by Verdesirs Consulting Inc. in Saint Lucia"
-             loading="lazy" width="300" height="380">
+             loading="lazy" decoding="async" width="300" height="380" onerror="this.style.display='none'">
         <div class="gallery-caption">Structural Frame</div>
      </div>
        <div class="gallery-item">
         <img src="images/retaining-wall-construction.jpg"
              alt="Retaining wall construction project by Verdesirs Consulting Inc. in Saint Lucia"
-             loading="lazy" width="300" height="380">
+             loading="lazy" decoding="async" width="300" height="380" onerror="this.style.display='none'">
         <div class="gallery-caption">Retaining Wall Construction</div>
       </div>
       <div class="gallery-item">
         <img src="images/almost-completed-teal-house.webp"
              alt="Teal-painted home in the final stages of construction in Saint Lucia"
-             loading="lazy" width="300" height="380">
+             loading="lazy" decoding="async" width="300" height="380" onerror="this.style.display='none'">
         <div class="gallery-caption">Closing Stages</div>
       </div>
        <div class="gallery-item">
         <img src="images/modern-home-build-progress-01.webp"
              alt="Modern residential construction home project in progress in Saint Lucia"
-             loading="lazy" width="300" height="380">
+             loading="lazy" decoding="async" width="300" height="380" onerror="this.style.display='none'">
         <div class="gallery-caption">Modern Home Build <br>Progression - 01</div>
       </div>
        <div class="gallery-item">
         <img src="images/modern-home-build-progress-02.webp"
              alt="Modern residential construction home project in progress in Saint Lucia"
-             loading="lazy" width="300" height="380">
+             loading="lazy" decoding="async" width="300" height="380" onerror="this.style.display='none'">
         <div class="gallery-caption">Modern Home Build <br>Progression - 02</div>
       </div>
       <div class="gallery-item">
         <img src="images/modern-house-project-in-the-making-02.webp"
              alt="Modern residential construction project in progress in Saint Lucia"
-             loading="lazy" width="300" height="380">
+             loading="lazy" decoding="async" width="300" height="380" onerror="this.style.display='none'">
         <div class="gallery-caption">Modern Build In Final Stages</div>
       </div>
             <div class="gallery-item">
         <img src="images/renovation-work-bar-to-apartments.webp"
              alt="Modern residential construction project in progress in Saint Lucia"
-             loading="lazy" width="300" height="380">
+             loading="lazy" decoding="async" width="300" height="380" onerror="this.style.display='none'">
         <div class="gallery-caption">Renovation Works — <br>Change to Apartment-Complex</div>
       </div>       
          
@@ -1139,7 +1206,7 @@
         <div class="process-visual">
           <img src="images/construction-process-images.webp"
                alt="Verdesirs Consulting Inc. team working on an active construction site in Saint Lucia"
-               loading="lazy" class="mx-auto img-fluid object-fit-cover" width="600" height="480">
+               loading="lazy" decoding="async" class="mx-auto img-fluid object-fit-cover" width="600" height="480" onerror="this.style.display='none'">
           <div class="process-visual-badge" aria-hidden="true">
             <div class="pv-badge-num">3</div>
             <div class="pv-badge-label">Simple Steps</div>
@@ -1384,7 +1451,7 @@
           <img src="images/construction-progress.webp"
                alt="Verdesirs Consulting Inc. team on an active construction site in Saint Lucia"
                class="img-fluid mx-auto object-fit-cover about-img-main"
-               loading="lazy" width="520" height="600">
+               loading="lazy" decoding="async" width="520" height="600" onerror="this.style.display='none'">
           <div class="about-badge" aria-hidden="true">
             <div class="about-badge-num">6+</div>
             <div class="about-badge-label">Years Building Saint Lucia</div>
@@ -1392,7 +1459,7 @@
           <img src="images/verdesirs-logo-hd.webp"
                alt="Verdesirs Consulting Inc. logo"
                class="mx-auto img-fluid object-fit-cover about-img-accent"
-               loading="lazy" width="120" height="120">
+               loading="lazy" decoding="async" width="120" height="120" onerror="this.style.display='none'">
         </div>
       </div>
 
@@ -1433,6 +1500,8 @@
   </div>
 </section>
 
+</main>
+
 <!-- ============================================================
      FOOTER
      ============================================================ -->
@@ -1445,8 +1514,8 @@
           <div class="footer-brand-logo">
             <img src="images/verdesirs-logo-hd.webp"
                  alt="Verdesirs Consulting Inc. logo"
-                 loading="lazy" width="80" height="80"
-                 class="img-fluid mx-auto object-fit-cover rounded-pill">
+                 loading="lazy" decoding="async" width="80" height="80"
+                 class="img-fluid mx-auto object-fit-cover rounded-pill" onerror="this.style.display='none'">
           </div>
           <div class="footer-brand-name">VERDESIRS</div>
           <div class="footer-brand-sub">Consulting Inc. — Saint Lucia</div>
@@ -1551,7 +1620,7 @@
 <div class="container">
   <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2 text-primary">
      <div>
-        <p id="footer-year footer-copy">© 2025 Verdesirs Consulting Inc. All rights reserved. · Gros Islet, Saint Lucia.</p>
+        <p class="footer-copy">© <span id="footer-year">2025</span> Verdesirs Consulting Inc. All rights reserved. · Gros Islet, Saint Lucia.</p>
         <div class="footer-legal">
           <a href="legal.html#do-not-sell">Do Not Sell or Share My Personal Information</a>
           &nbsp;·&nbsp;
@@ -1561,8 +1630,7 @@
       <span style="opacity:.45">Built with care for small businesses.</span>
     </div>
   </div>
-</div>
-     
+
 </footer>
 
 <!-- ============================================================
@@ -1581,8 +1649,16 @@
 <!-- ============================================================
      SCRIPTS
      ============================================================ -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous" defer></script>
 <script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  // Auto-update footer copyright year
+  const footerYear = document.getElementById('footer-year');
+  if (footerYear) footerYear.textContent = new Date().getFullYear();
+
   // Navbar scroll effect
   const nav = document.getElementById('mainNav');
   window.addEventListener('scroll', () => {
@@ -1632,6 +1708,8 @@
       scrollContainer.scrollLeft = touchScrollLeft + dx;
     }, { passive: true });
   }
+
+});
 </script>
 
 </body>
