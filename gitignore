@@ -1,0 +1,22 @@
+# Environment and config files — never commit these
+.env
+.env.local
+.env.production
+config.local.js
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor folders
+.vscode/
+.idea/
+
+# Node (if used for build tools)
+node_modules/
+npm-debug.log
+
+# Local notes — keep off public repo
+notes.txt
+client-credentials.txt
