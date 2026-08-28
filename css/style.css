@@ -1,16 +1,19 @@
- :root {
+:root {
     --navy: #0d1b3e;
     --navy-mid: #162650;
     --navy-light: #1e3368;
     --gold: #c9a84c;
     --gold-light: #e8c96e;
+    --gold-on-light: #7d611f;   /* WCAG AA-safe (5.8:1 on white, 5.3:1 on off-white) — use for gold text on light backgrounds. Original --gold (2.29:1 on white) fails AA and must stay reserved for dark/navy backgrounds only. */
     --white: #ffffff;
     --off-white: #f7f5f0;
     --concrete: #e8e6e1;
     --text-dark: #0d1b3e;
     --text-mid: #4a5568;
-    --wa-green: #25D366;
+    --wa-green: #25D366;        /* Keep for icon/border/navy-background contexts — passes 8.5:1 there. Do NOT use for white text on this color as a background; that combo fails WCAG AA (1.98:1). */
     --wa-green-dark: #1da851;
+    --wa-green-cta: #0F7A3A;    /* WCAG AA-safe for white text ON this as a background at real button text sizes (5.4:1). Use for solid-fill CTA buttons only (.nav-cta, .btn-wa). */
+    --wa-green-cta-dark: #0c6b32; /* hover state for the above */
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -119,7 +122,7 @@
   .nav-link:hover { color: var(--gold) !important; }
 
   .nav-cta {
-    background: var(--wa-green);
+    background: var(--wa-green-cta);
     color: white !important;
     border-radius: 4px;
     padding: 8px 20px !important;
@@ -129,7 +132,7 @@
     transition: background 0.2s !important;
   }
 
-  .nav-cta:hover { background: var(--wa-green-dark) !important; color: white !important; }
+  .nav-cta:hover { background: var(--wa-green-cta-dark) !important; color: white !important; }
 
   .navbar-toggler { border-color: var(--gold); }
   .navbar-toggler-icon {
@@ -230,7 +233,7 @@
   }
 
   .btn-wa {
-    background: var(--wa-green);
+    background: var(--wa-green-cta);
     color: white;
     font-family: 'Barlow', sans-serif;
     font-weight: 600;
@@ -247,7 +250,7 @@
   }
 
   .btn-wa:hover {
-    background: var(--wa-green-dark);
+    background: var(--wa-green-cta-dark);
     color: white;
     transform: translateY(-2px);
   }
@@ -365,6 +368,19 @@
     color: var(--gold);
     display: block;
     margin-bottom: 12px;
+  }
+
+  /* WCAG AA fix: default gold (2.29:1 on white, 2.10:1 on off-white) fails against
+     light backgrounds. Base .section-eyebrow above stays gold for the three sections
+     that sit on navy (#services, #service-areas, #quote-cta — 7.39:1, passes fine).
+     These sections sit on white or off-white and need the darker AA-safe variant. */
+  #our-work .section-eyebrow,
+  #why-us .section-eyebrow,
+  #process .section-eyebrow,
+  #faq .section-eyebrow,
+  #about .section-eyebrow,
+  .horizontal-gallery-section .section-eyebrow {
+    color: var(--gold-on-light);
   }
 
   .section-title {
@@ -735,8 +751,8 @@
   }
 
   .quote-btn:hover {
-    background: var(--wa-green);
-    border-color: var(--wa-green);
+    background: var(--wa-green-cta);
+    border-color: var(--wa-green-cta);
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 8px 24px rgba(37,211,102,0.3);
@@ -1039,7 +1055,7 @@
   .wa-float-btn {
     width: 60px;
     height: 60px;
-    background: var(--wa-green);
+    background: var(--wa-green-cta);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1295,7 +1311,7 @@
 }
 
 .sa-check-btn:hover {
-  background: var(--wa-green);
+  background: var(--wa-green-cta);
   color: white;
   transform: translateY(-2px);
 }
@@ -1397,5 +1413,3 @@
     padding: 8px 14px;
   }
 }
-
-
