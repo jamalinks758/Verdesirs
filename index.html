@@ -666,7 +666,7 @@
           <a class="nav-link nav-cta"
              href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20quote%3F"
              target="_blank" rel="noopener noreferrer"
-             aria-label="Get a free construction quote on WhatsApp">
+             aria-label="Get a construction quote on WhatsApp">
             <i class="fab fa-whatsapp me-1" aria-hidden="true"></i> Get a Quote
           </a>
         </li>
@@ -700,9 +700,9 @@
         </p>
         <p class="hero-services-line">First Home Builds &nbsp;•&nbsp; Renovations &amp; Upgrades &nbsp;•&nbsp; Caribbean Diaspora Project Management</p>
         <div class="hero-btns">
-          <a href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20free%20quote%3F"
+          <a href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20quote%3F"
              class="btn-wa" target="_blank" rel="noopener noreferrer"
-             aria-label="Get a free construction quote from Verdesirs on WhatsApp">
+             aria-label="Get a construction quote from Verdesirs on WhatsApp">
             <i class="fab fa-whatsapp" aria-hidden="true"></i> Get a Quote on WhatsApp
           </a>
           <a href="#our-work" class="btn-ghost" aria-label="Scroll down to view our completed projects">View Our Work</a>
@@ -1507,7 +1507,7 @@
   <div class="container position-relative">
     <div class="text-center reveal">
       <span class="section-eyebrow">Start Today</span>
-      <h2 class="cta-title" id="cta-heading">Get a Free Quote in Minutes</h2>
+      <h2 class="cta-title" id="cta-heading">Get a Quote in Minutes</h2>
       <p class="cta-sub mx-auto">
         Choose your service and send your request directly on WhatsApp.
         We respond within the hour.
@@ -1700,11 +1700,11 @@
           </div>
 
           <div class="mt-4">
-            <a href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20free%20quote%3F"
+            <a href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20quote%3F"
                target="_blank" rel="noopener noreferrer"
                class="btn-wa" style="font-size:.82rem;padding:12px 24px;"
-               aria-label="Get a free construction quote from Verdesirs on WhatsApp">
-              <i class="fab fa-whatsapp" aria-hidden="true"></i> Get a Free Quote
+               aria-label="Get a construction quote from Verdesirs on WhatsApp">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i> Get a Quote
             </a>
           </div>
         </div>
@@ -1716,9 +1716,9 @@
 <div class="container">
   <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-2 text-primary">
      <div>
-        <p class="footer-copy">© <span id="footer-year">2025</span> Verdesirs Consulting Inc. All rights reserved. · Gros Islet, Saint Lucia.</p>
+        <p class="footer-copy">© <span id="footer-year">2026</span> Verdesirs Consulting Inc. All rights reserved. · Gros Islet, Saint Lucia.</p>
         <div class="footer-legal">
-          <a href="legal.html#do-not-sell">Do Not Sell or Share My Personal Information</a>
+          <a href="legal.html#ccpa-rights">Do Not Sell or Share My Personal Information</a>
           &nbsp;·&nbsp;
           <a href="legal.html">Privacy Policy &amp; Terms</a>
         </div>
@@ -1803,6 +1803,19 @@ document.addEventListener('DOMContentLoaded', function() {
       const dx = touchStartX - e.touches[0].pageX;
       scrollContainer.scrollLeft = touchScrollLeft + dx;
     }, { passive: true });
+
+    // Keyboard support — WCAG 2.1 AA (arrow keys scroll when gallery is focused)
+    scrollContainer.setAttribute('tabindex', '0');
+    scrollContainer.addEventListener('keydown', (e) => {
+      const step = 320;
+      if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        scrollContainer.scrollBy({ left: step, behavior: 'smooth' });
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        scrollContainer.scrollBy({ left: -step, behavior: 'smooth' });
+      }
+    });
   }
 
 });
