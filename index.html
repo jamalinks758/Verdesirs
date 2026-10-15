@@ -293,7 +293,7 @@
 .sa-pill--all:hover { background: rgba(201,168,76,0.2); }
 
 .sa-check-text {
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.80);
   font-size: 0.9rem;
   letter-spacing: 0.05em;
   margin-bottom: 16px;
@@ -380,7 +380,7 @@
 
 .sa-diaspora-text {
   font-size: 0.95rem;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.82);
   line-height: 1.9;
   margin-bottom: 32px;
   max-width: 640px;
@@ -636,6 +636,7 @@
 <!-- ============================================================
      NAVBAR
      ============================================================ -->
+<header role="banner">
 <nav id="mainNav" class="navbar navbar-expand-lg" role="navigation" aria-label="Main site navigation">
   <div class="container">
     <a class="navbar-brand" href="index.html" aria-label="Verdesirs Consulting Inc. — Go to homepage">
@@ -674,6 +675,7 @@
     </div>
   </div>
 </nav>
+</header>
 
 <main id="main-content" role="main">
 
@@ -725,25 +727,25 @@
     <div class="row g-0 text-center text-lg-start">
       <div class="col-6 col-lg-3">
         <div class="trust-item justify-content-center justify-content-lg-start">
-          <div class="trust-icon" aria-hidden="true"><i class="fas fa-hard-hat"></i></div>
+          <div class="trust-icon" aria-hidden="true"><i class="fas fa-hard-hat" aria-hidden="true"></i></div>
           <span class="trust-label">6 Years Experience</span>
         </div>
       </div>
       <div class="col-6 col-lg-3">
         <div class="trust-item justify-content-center justify-content-lg-start">
-          <div class="trust-icon" aria-hidden="true"><i class="fas fa-award"></i></div>
+          <div class="trust-icon" aria-hidden="true"><i class="fas fa-award" aria-hidden="true"></i></div>
           <span class="trust-label">Quality Workmanship</span>
         </div>
       </div>
       <div class="col-6 col-lg-3">
         <div class="trust-item justify-content-center justify-content-lg-start">
-          <div class="trust-icon" aria-hidden="true"><i class="fas fa-file-signature"></i></div>
+          <div class="trust-icon" aria-hidden="true"><i class="fas fa-file-signature" aria-hidden="true"></i></div>
           <span class="trust-label">Written Quote Guaranteed</span>
         </div>
       </div>
       <div class="col-6 col-lg-3">
         <div class="trust-item justify-content-center justify-content-lg-start">
-          <div class="trust-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="trust-icon" aria-hidden="true"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
           <span class="trust-label">Island-Wide Service</span>
         </div>
       </div>
@@ -985,7 +987,7 @@
       </div>
        <div class="gallery-item">
         <img src="images/modern-home-build-progress-02.webp"
-             alt="Modern residential construction home project in progress in Saint Lucia"
+             alt="Second stage of a modern residential home build showing structural progress on a construction site in Saint Lucia"
              loading="lazy" decoding="async" width="300" height="380" onerror="this.style.display='none'">
         <div class="gallery-caption">Modern Home Build <br>Progression - 02</div>
       </div>
@@ -997,7 +999,7 @@
       </div>
             <div class="gallery-item">
         <img src="images/renovation-work-bar-to-apartments.webp"
-             alt="Modern residential construction project in progress in Saint Lucia"
+             alt="Commercial renovation project converting a bar space into an apartment complex in Saint Lucia"
              loading="lazy" decoding="async" width="300" height="380" onerror="this.style.display='none'">
         <div class="gallery-caption">Renovation Works — <br>Change to Apartment-Complex</div>
       </div>       
@@ -1005,7 +1007,7 @@
     </div>
 
     <p class="scroll-hint" aria-hidden="true">
-      <i class="fas fa-arrow-left"></i> Drag to scroll <i class="fas fa-arrow-right"></i>
+      <i class="fas fa-arrow-left" aria-hidden="true"></i> Drag to scroll <i class="fas fa-arrow-right" aria-hidden="true"></i>
     </p>
   </div>
 </section>
@@ -1553,7 +1555,8 @@
             <div class="about-badge-label">Years Building Saint Lucia</div>
           </div>
           <img src="images/verdesirs-logo-hd.webp"
-               alt="Verdesirs Consulting Inc. logo"
+               alt=""
+               role="presentation"
                class="mx-auto img-fluid object-fit-cover about-img-accent"
                loading="lazy" decoding="async" width="120" height="120" onerror="this.style.display='none'">
         </div>
@@ -1609,7 +1612,8 @@
         <div class="col-lg-4">
           <div class="footer-brand-logo">
             <img src="images/verdesirs-logo-hd.webp"
-                 alt="Verdesirs Consulting Inc. logo"
+                 alt=""
+                 role="presentation"
                  loading="lazy" decoding="async" width="80" height="80"
                  class="img-fluid mx-auto object-fit-cover rounded-pill" onerror="this.style.display='none'">
           </div>
@@ -1637,7 +1641,7 @@
         </div>
 
         <div class="col-sm-6 col-lg-2">
-          <h4 class="footer-heading">Quick Links</h4>
+          <p class="footer-heading" role="heading" aria-level="3">Quick Links</p>
           <ul class="footer-links">
             <li><a href="#our-work" aria-label="View our portfolio of completed projects">Our Work</a></li>
             <li><a href="#services" aria-label="View our construction services">Services</a></li>
@@ -1650,7 +1654,7 @@
         </div>
 
         <div class="col-sm-6 col-lg-2">
-          <h4 class="footer-heading">Services</h4>
+          <p class="footer-heading" role="heading" aria-level="3">Services</p>
           <ul class="footer-links">
             <li>
               <a href="https://wa.me/17587151506?text=I%20want%20to%20build%20a%20house%20in%20Saint%20Lucia"
@@ -1671,7 +1675,7 @@
         </div>
 
         <div class="col-lg-4">
-          <h4 class="footer-heading">Contact Us</h4>
+          <p class="footer-heading" role="heading" aria-level="3">Contact Us</p>
 
           <div class="footer-contact-item">
             <div class="footer-contact-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
@@ -1746,7 +1750,7 @@
      SCRIPTS
      ============================================================ -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmQKZr5QFBkRQqEpfGXL1P1/1j5u"
         crossorigin="anonymous" defer></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
