@@ -125,8 +125,8 @@
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  /* Bootstrap collapse/accordion needs its own padding — exempt from reset */
-  .accordion-body, .accordion-button, .collapse, .collapsing, .navbar-collapse {
+  /* Bootstrap navbar collapse needs its own padding — exempt from reset */
+  .collapse, .collapsing, .navbar-collapse {
     padding: revert;
     margin: revert;
   }
@@ -1303,69 +1303,62 @@
 
 
   /* ==============================
-     FAQ
+     FAQ — STATIC OPEN LIST
      ============================== */
 #faq {
   padding: 100px 0;
 }
 
-.faq-accordion .accordion-item {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(13, 27, 62, 0.12);
+.faq-list {
+  display: flex;
+  flex-direction: column;
 }
 
-.faq-accordion .accordion-item:first-child {
+.faq-item {
+  border-bottom: 1px solid rgba(13, 27, 62, 0.12);
+  padding: 1.75rem 0;
+}
+
+.faq-item:first-child {
   border-top: 1px solid rgba(13, 27, 62, 0.12);
 }
 
-.faq-accordion .accordion-button {
-  background: transparent;
-  color: var(--navy);
+.faq-q {
   font-family: 'Barlow', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1rem;
-  padding: 1.25rem 1rem 1.25rem 0;
-  box-shadow: none;
-  border: none;
-  letter-spacing: 0.01em;
+  color: var(--navy);
+  margin-bottom: 0.65rem;
   line-height: 1.5;
+  letter-spacing: 0.01em;
+  padding-left: 1.1rem;
+  position: relative;
 }
 
-.faq-accordion .accordion-button:not(.collapsed) {
-  color: var(--gold);
-  background: transparent;
-  box-shadow: none;
+.faq-q::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.35em;
+  width: 4px;
+  height: 1em;
+  background: var(--gold);
+  border-radius: 2px;
 }
 
-.faq-accordion .accordion-button::after {
-  flex-shrink: 0;
-  margin-left: 1.5rem;
-  /* Use default Bootstrap arrow — it renders fine on the light off-white bg */
-}
-
-.faq-accordion .accordion-body {
-  color: var(--text-mid);
+.faq-a {
   font-family: 'Barlow', sans-serif;
   font-size: 0.95rem;
+  color: var(--text-mid);
   line-height: 1.85;
-  padding: 0 1rem 1.25rem 0;
-}
-
-/* Explicit collapse show states — override any inherited rules */
-.accordion-collapse.show,
-.accordion-collapse.collapsing {
-  display: block !important;
-}
-.accordion-button:not(.collapsed) {
-  color: var(--gold);
-  background-color: transparent;
-  box-shadow: none;
+  margin: 0;
+  padding-left: 1.1rem;
 }
 
 @media (max-width: 768px) {
   #faq { padding: 72px 0; }
-  .faq-accordion .accordion-button { font-size: 0.93rem; }
+  .faq-q { font-size: 0.93rem; }
+  .faq-item { padding: 1.4rem 0; }
 }
 
 /* ==============================
@@ -1743,7 +1736,7 @@ html {
 @media (max-width: 768px) {
   #service-areas { padding: 72px 0; }
   #faq { padding: 72px 0; }
-  .faq-accordion .accordion-button { font-size: 0.93rem; }
+  .faq-q { font-size: 0.93rem; }
   .sa-diaspora { flex-direction: column; gap: 24px; padding: 36px 28px; }
   .sa-diaspora-badge { width: 52px; height: 52px; font-size: 1.3rem; }
   .sa-pill { font-size: 0.8rem; padding: 8px 14px; }
@@ -2637,156 +2630,68 @@ html {
 
     <div class="row justify-content-center">
       <div class="col-lg-9 reveal reveal-delay-1">
-        <div class="accordion accordion-flush faq-accordion" id="faqAccordion">
+        <div class="faq-list">
 
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button"
-                      data-bs-toggle="collapse" data-bs-target="#faq1"
-                      aria-expanded="false" aria-controls="faq1"
-                      aria-label="Do you offer construction services across all of Saint Lucia?">
-                Do you offer construction services across all of Saint Lucia?
-              </button>
-            </h3>
-            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Yes — we are based in Gros Islet and serve every district in Saint Lucia,
-                including Castries, Micoud, Vieux Fort, Soufrière, Dennery, Laborie, Choiseul,
-                Anse la Raye, Canaries, and all surrounding communities. No project is too far.
-              </div>
-            </div>
+          <div class="faq-item">
+            <h3 class="faq-q">Do you offer construction services across all of Saint Lucia?</h3>
+            <p class="faq-a">Yes — we are based in Gros Islet and serve every district in Saint Lucia,
+              including Castries, Micoud, Vieux Fort, Soufrière, Dennery, Laborie, Choiseul,
+              Anse la Raye, Canaries, and all surrounding communities. No project is too far.</p>
           </div>
 
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button"
-                      data-bs-toggle="collapse" data-bs-target="#faq2"
-                      aria-expanded="false" aria-controls="faq2"
-                      aria-label="How much does construction cost in Saint Lucia?">
-                How much does construction cost in Saint Lucia?
-              </button>
-            </h3>
-            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Costs vary based on project size, materials, site conditions, and scope.
-                A full residential build is priced differently from a renovation or upgrade.
-                We provide detailed, written quotes at no obligation — message us on WhatsApp
-                and we will assess your needs and give you a clear estimate.
-              </div>
-            </div>
+          <div class="faq-item">
+            <h3 class="faq-q">How much does construction cost in Saint Lucia?</h3>
+            <p class="faq-a">Costs vary based on project size, materials, site conditions, and scope.
+              A full residential build is priced differently from a renovation or upgrade.
+              We provide detailed, written quotes at no obligation — message us on WhatsApp
+              and we will assess your needs and give you a clear estimate.</p>
           </div>
 
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button"
-                      data-bs-toggle="collapse" data-bs-target="#faq3"
-                      aria-expanded="false" aria-controls="faq3"
-                      aria-label="Do you offer site visits before giving a quote?">
-                Do you offer site visits before giving a quote?
-              </button>
-            </h3>
-            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Yes. We offer site visits as part of our quoting process.
-                After assessing your site in person, we provide a written, itemized quote.
-                No work begins until you have that quote in hand and have approved it.
-              </div>
-            </div>
+          <div class="faq-item">
+            <h3 class="faq-q">Do you offer site visits before giving a quote?</h3>
+            <p class="faq-a">Yes. We offer site visits as part of our quoting process.
+              After assessing your site in person, we provide a written, itemized quote.
+              No work begins until you have that quote in hand and have approved it.</p>
           </div>
 
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button"
-                      data-bs-toggle="collapse" data-bs-target="#faq4"
-                      aria-expanded="false" aria-controls="faq4"
-                      aria-label="What construction services does Verdesirs offer?">
-                What construction services does Verdesirs offer?
-              </button>
-            </h3>
-            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                We offer full residential construction, commercial construction, renovations and
-                upgrades, and end-to-end project management across all of Saint Lucia.
-                Whether you're building from the ground up or modernizing an existing space,
-                we handle every phase from foundation to finishing touches.
-              </div>
-            </div>
+          <div class="faq-item">
+            <h3 class="faq-q">What construction services does Verdesirs offer?</h3>
+            <p class="faq-a">We offer full residential construction, commercial construction, renovations and
+              upgrades, and end-to-end project management across all of Saint Lucia.
+              Whether you're building from the ground up or modernizing an existing space,
+              we handle every phase from foundation to finishing touches.</p>
           </div>
 
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button"
-                      data-bs-toggle="collapse" data-bs-target="#faq5"
-                      aria-expanded="false" aria-controls="faq5"
-                      aria-label="How long does a construction project take in Saint Lucia?">
-                How long does a construction project take in Saint Lucia?
-              </button>
-            </h3>
-            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Timelines depend on scope and complexity. A renovation may take a few weeks,
-                while a full residential build typically spans several months. We provide a clear
-                project schedule from day one and send you regular updates throughout
-                so there are no surprises on timing.
-              </div>
-            </div>
+          <div class="faq-item">
+            <h3 class="faq-q">How long does a construction project take in Saint Lucia?</h3>
+            <p class="faq-a">Timelines depend on scope and complexity. A renovation may take a few weeks,
+              while a full residential build typically spans several months. We provide a clear
+              project schedule from day one and send you regular updates throughout
+              so there are no surprises on timing.</p>
           </div>
 
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button"
-                      data-bs-toggle="collapse" data-bs-target="#faq6"
-                      aria-expanded="false" aria-controls="faq6"
-                      aria-label="Do you handle building permits and planning approvals in Saint Lucia?">
-                Do you handle building permits and planning approvals?
-              </button>
-            </h3>
-            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Yes. We guide you through the full permitting and planning approval process
-                in Saint Lucia. As your construction partner, we ensure your project meets all
-                requirements set by local authorities before a single tool hits the ground.
-              </div>
-            </div>
+          <div class="faq-item">
+            <h3 class="faq-q">Do you handle building permits and planning approvals?</h3>
+            <p class="faq-a">Yes. We guide you through the full permitting and planning approval process
+              in Saint Lucia. As your construction partner, we ensure your project meets all
+              requirements set by local authorities before a single tool hits the ground.</p>
           </div>
 
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button"
-                      data-bs-toggle="collapse" data-bs-target="#faq7"
-                      aria-expanded="false" aria-controls="faq7"
-                      aria-label="Can you manage my Saint Lucia construction project if I'm part of the Caribbean diaspora living abroad?">
-                Can you manage my project if I live abroad?
-              </button>
-            </h3>
-            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Absolutely. We regularly work with Caribbean diaspora clients building or renovating
-                back home in Saint Lucia. We handle everything on the ground — site visits, contractor
-                coordination, permits, and purchasing — and keep you informed with regular WhatsApp
-                photo updates so you remain fully in control no matter where you are.
-              </div>
-            </div>
+          <div class="faq-item">
+            <h3 class="faq-q">Can you manage my project if I live abroad?</h3>
+            <p class="faq-a">Absolutely. We regularly work with Caribbean diaspora clients building or renovating
+              back home in Saint Lucia. We handle everything on the ground — site visits, contractor
+              coordination, permits, and purchasing — and keep you informed with regular WhatsApp
+              photo updates so you remain fully in control no matter where you are.</p>
           </div>
 
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button"
-                      data-bs-toggle="collapse" data-bs-target="#faq8"
-                      aria-expanded="false" aria-controls="faq8"
-                      aria-label="Why should I choose Verdesirs Consulting Inc. for my construction project?">
-                Why should I choose Verdesirs Consulting Inc.?
-              </button>
-            </h3>
-            <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                We are a Saint Lucia-rooted company with 6 years of experience delivering residential
-                and commercial projects island-wide. We offer site visits, a written quote before
-                work begins, transparent pricing, fast WhatsApp communication, and a team that shows
-                up every single time. Our clients — local and Caribbean diaspora — trust us because we earn it
-                on every project.
-              </div>
-            </div>
+          <div class="faq-item">
+            <h3 class="faq-q">Why should I choose Verdesirs Consulting Inc.?</h3>
+            <p class="faq-a">We are a Saint Lucia-rooted company with 6 years of experience delivering residential
+              and commercial projects island-wide. We offer site visits, a written quote before
+              work begins, transparent pricing, fast WhatsApp communication, and a team that shows
+              up every single time. Our clients — local and Caribbean diaspora — trust us because we earn it
+              on every project.</p>
           </div>
 
         </div>
