@@ -68,9 +68,172 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <!-- ══ MAIN SITE STYLESHEET ═══════════════════════════ -->
-<link href="css/style.css" rel="stylesheet">
 
 <style>
+/* ===================================================
+   SHARED BASE — from style.css (merged inline)
+   =================================================== */
+:root {
+    --navy: #0d1b3e;
+    --navy-mid: #162650;
+    --navy-light: #1e3368;
+    --gold: #c9a84c;
+    --gold-light: #e8c96e;
+    --gold-on-light: #7d611f;   /* WCAG AA-safe (5.8:1 on white, 5.3:1 on off-white) — use for gold text on light backgrounds. Original --gold (2.29:1 on white) fails AA and must stay reserved for dark/navy backgrounds only. */
+    --white: #ffffff;
+    --off-white: #f7f5f0;
+    --concrete: #e8e6e1;
+    --text-dark: #0d1b3e;
+    --text-mid: #4a5568;
+    --wa-green: #25D366;        /* Keep for icon/border/navy-background contexts — passes 8.5:1 there. Do NOT use for white text on this color as a background; that combo fails WCAG AA (1.98:1). */
+    --wa-green-dark: #1da851;
+    --wa-green-cta: #0F7A3A;    /* WCAG AA-safe for white text ON this as a background at real button text sizes (5.4:1). Use for solid-fill CTA buttons only (.nav-cta, .btn-wa). */
+    --wa-green-cta-dark: #0c6b32; /* hover state for the above */
+  }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Barlow', sans-serif;
+    background: #fff;
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+#mainNav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.4s ease;
+    padding: 20px 0;
+    background: transparent;
+  }
+#mainNav.scrolled {
+    background: rgba(13,27,62,0.97);
+    backdrop-filter: blur(10px);
+    padding: 12px 0;
+    box-shadow: 0 2px 30px rgba(0,0,0,0.3);
+  }
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+  }
+.nav-logo-circle {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--gold);
+    flex-shrink: 0;
+  }
+.nav-logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+.brand-text-top {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    color: var(--white);
+    line-height: 1;
+    display: block;
+  }
+.brand-text-sub {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    display: block;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+.nav-link {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.85) !important;
+    padding: 6px 16px !important;
+    transition: color 0.2s;
+  }
+.nav-link:hover { color: var(--gold) !important; }
+.nav-cta {
+    background: var(--wa-green-cta);
+    color: white !important;
+    border-radius: 4px;
+    padding: 8px 20px !important;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    transition: background 0.2s !important;
+  }
+.nav-cta:hover { background: var(--wa-green-cta-dark) !important; color: white !important; }
+.navbar-toggler { border-color: var(--gold); }
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28201%2C168%2C76%2C1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+.btn-wa {
+    background: var(--wa-green-cta);
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.2s, transform 0.2s;
+  }
+.btn-wa:hover {
+    background: var(--wa-green-cta-dark);
+    color: white;
+    transform: translateY(-2px);
+  }
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+@keyframes scrollPulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+.gold-divider {
+    height: 3px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    border: none;
+    margin: 0;
+  }
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+body {
+  color: var(--text-mid);
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  padding: 0 1rem 1.25rem 0;
+}
+
+/* ===================================================
+   LEGAL PAGE STYLES
+   =================================================== */
 /* ── GLOBAL ───────────────────────────────────────── */
 html, body { overflow-x: hidden; max-width: 100%; }
 *, *::before, *::after { box-sizing: border-box; }
@@ -490,8 +653,8 @@ html, body { overflow-x: hidden; max-width: 100%; }
 
       <!-- Sticky TOC -->
       <div class="col-lg-3 d-none d-lg-block">
-        <div class="legal-toc">
-          <h6><i class="bi bi-list-ul me-1" aria-hidden="true"></i> Contents</h6>
+        <nav class="legal-toc" aria-label="Table of contents">
+          <h2 class="toc-heading"><i class="bi bi-list-ul me-1" aria-hidden="true"></i> Contents</h2>
 
           <div class="toc-section">General</div>
           <a href="#who-we-are"       class="toc-link"><i class="bi bi-chevron-right" aria-hidden="true"></i> 1. Who We Are</a>
