@@ -125,8 +125,8 @@
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  /* Bootstrap navbar collapse needs its own padding — exempt from reset */
-  .collapse, .collapsing, .navbar-collapse {
+  /* Bootstrap collapse elements — preserve their default spacing */
+  .collapse, .collapsing {
     padding: revert;
     margin: revert;
   }
@@ -159,7 +159,9 @@
   }
 
   /* ==============================
-     NAVBAR
+     NAVBAR — ALWAYS VISIBLE
+     No hamburger. All links shown
+     on every screen size.
      ============================== */
   #mainNav {
     position: fixed;
@@ -167,27 +169,42 @@
     width: 100%;
     z-index: 1000;
     transition: background 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
-    padding: 20px 0;
-    background: rgba(13,27,62,0.15);
+    padding: 14px 0;
+    background: rgba(13,27,62,0.92);
+    backdrop-filter: blur(8px);
   }
 
   #mainNav.scrolled {
-    background: rgba(13,27,62,0.97);
-    backdrop-filter: blur(10px);
-    padding: 12px 0;
-    box-shadow: 0 2px 30px rgba(0,0,0,0.3);
+    background: rgba(13,27,62,0.98);
+    backdrop-filter: blur(12px);
+    padding: 10px 0;
+    box-shadow: 0 2px 30px rgba(0,0,0,0.35);
   }
 
+  /* ── NAV INNER LAYOUT ── */
+  .nav-inner {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* ── BRAND ── */
   .navbar-brand {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
     text-decoration: none;
+    flex-shrink: 0;
   }
 
   .nav-logo-circle {
-    width: 46px;
-    height: 46px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid var(--gold);
@@ -203,9 +220,9 @@
   .brand-text-top {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 800;
-    font-size: 1.1rem;
+    font-size: 1rem;
     letter-spacing: 0.12em;
-    color: var(--white);
+    color: #fff;
     line-height: 1;
     display: block;
   }
@@ -213,68 +230,102 @@
   .brand-text-sub {
     font-family: 'Barlow', sans-serif;
     font-weight: 300;
-    font-size: 0.65rem;
-    letter-spacing: 0.25em;
+    font-size: 0.6rem;
+    letter-spacing: 0.22em;
     color: var(--gold);
     display: block;
     text-transform: uppercase;
     margin-top: 2px;
   }
 
+  /* ── NAV LINKS LIST ── */
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
+  }
+
   .nav-link {
     font-family: 'Barlow', sans-serif;
     font-weight: 500;
-    font-size: 0.82rem;
-    letter-spacing: 0.1em;
+    font-size: 0.78rem;
+    letter-spacing: 0.09em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.85) !important;
-    padding: 6px 16px !important;
-    transition: color 0.2s;
+    color: rgba(255,255,255,0.82);
+    padding: 6px 10px;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: color 0.2s, background 0.2s;
+    display: block;
+    white-space: nowrap;
   }
 
-  .nav-link:hover { color: var(--gold) !important; }
+  .nav-link:hover {
+    color: var(--gold);
+    background: rgba(201,168,76,0.08);
+  }
 
+  /* ── GET A QUOTE CTA ── */
   .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     background: var(--wa-green-cta);
-    color: white !important;
+    color: #fff;
     border-radius: 4px;
-    padding: 8px 20px !important;
+    padding: 7px 16px;
+    font-family: 'Barlow', sans-serif;
     font-weight: 600;
-    font-size: 0.8rem;
-    letter-spacing: 0.08em;
-    transition: background 0.2s !important;
+    font-size: 0.78rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s;
+    margin-left: 6px;
   }
 
-  .nav-cta:hover { background: var(--wa-green-cta-dark) !important; color: white !important; }
+  .nav-cta:hover { background: var(--wa-green-cta-dark); color: #fff; }
 
-  /* ── NAVBAR COLLAPSE MOBILE FIX ─────────────────────────
-     Ensures the dropdown menu renders below the fixed navbar
-     and is not clipped on mobile browsers                   */
-  @media (max-width: 991.98px) {
-    #mainNav {
-      background: rgba(13,27,62,0.97) !important;
+  /* ── MOBILE BEHAVIOUR ──
+     On small screens the links wrap beneath the brand
+     in a tight horizontal row. Font shrinks slightly
+     to keep everything readable without a dropdown.     */
+  @media (max-width: 600px) {
+    .nav-inner {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      padding: 10px 16px;
     }
-    #navMenu {
-      background: rgba(13,27,62,0.98);
-      border-top: 1px solid rgba(201,168,76,0.2);
-      padding: 12px 0 20px;
-      margin-top: 4px;
+    .nav-links {
+      width: 100%;
+      gap: 0;
+      border-top: 1px solid rgba(201,168,76,0.15);
+      padding-top: 6px;
     }
-    #navMenu .nav-link {
-      padding: 10px 20px !important;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+    .nav-links li {
+      flex: 0 0 auto;
     }
-    #navMenu .nav-item:last-child .nav-link { border-bottom: none; }
-    .navbar-collapse.collapsing,
-    .navbar-collapse.show {
-      display: block !important;
-      overflow: visible !important;
+    .nav-link {
+      font-size: 0.7rem;
+      padding: 5px 8px;
+      letter-spacing: 0.06em;
+    }
+    .nav-cta {
+      font-size: 0.72rem;
+      padding: 6px 12px;
+      margin-left: 4px;
     }
   }
 
-  .navbar-toggler { border-color: var(--gold); }
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28201%2C168%2C76%2C1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  @media (max-width: 380px) {
+    .nav-link { font-size: 0.65rem; padding: 4px 6px; }
+    .brand-text-top { font-size: 0.88rem; }
   }
 
   /* ==============================
@@ -308,6 +359,10 @@
     position: relative;
     z-index: 2;
     padding-top: 100px;
+  }
+
+  @media (max-width: 600px) {
+    .hero-content { padding-top: 140px; }
   }
 
   .hero-tag {
@@ -1565,6 +1620,11 @@
 html {
   overflow-x: hidden;
   max-width: 100%;
+  scroll-padding-top: 80px; /* offset fixed nav on anchor clicks */
+}
+
+@media (max-width: 600px) {
+  html { scroll-padding-top: 120px; } /* taller two-row nav on mobile */
 }
 
 /* ===== ACCESSIBILITY BASE (WCAG 2.1 AA) ===== */
@@ -1936,8 +1996,9 @@ html {
      NAVBAR
      ============================================================ -->
 <header role="banner">
-<nav id="mainNav" class="navbar navbar-expand-lg" role="navigation" aria-label="Main site navigation">
-  <div class="container">
+<nav id="mainNav" role="navigation" aria-label="Main site navigation">
+  <div class="nav-inner">
+
     <a class="navbar-brand" href="index.html" aria-label="Verdesirs Consulting Inc. — Go to homepage">
       <div class="nav-logo-circle">
         <img src="images/verdesirs-logo-hd.webp" alt="Verdesirs Consulting Inc. logo" loading="eager" decoding="sync" width="46" height="46" onerror="this.style.display='none'">
@@ -1948,30 +2009,24 @@ html {
       </div>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-      aria-controls="navMenu" aria-expanded="false" aria-label="Open navigation menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <ul class="nav-links" role="list">
+      <li><a class="nav-link" href="#our-work" aria-label="View our completed projects">Our Work</a></li>
+      <li><a class="nav-link" href="#services" aria-label="View our construction services">Services</a></li>
+      <li><a class="nav-link" href="#service-areas" aria-label="See areas we serve in Saint Lucia">Areas</a></li>
+      <li><a class="nav-link" href="#why-us" aria-label="Why clients choose Verdesirs">Why Us</a></li>
+      <li><a class="nav-link" href="#process" aria-label="See how our process works">Process</a></li>
+      <li><a class="nav-link" href="#faq" aria-label="Frequently asked questions">FAQ</a></li>
+      <li><a class="nav-link" href="#about" aria-label="About Verdesirs Consulting Inc.">About</a></li>
+      <li>
+        <a class="nav-cta"
+           href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20quote%3F"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Get a construction quote on WhatsApp">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i> Get a Quote
+        </a>
+      </li>
+    </ul>
 
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto align-items-center gap-1">
-        <li class="nav-item"><a class="nav-link" href="#our-work" aria-label="View our completed projects">Our Work</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services" aria-label="View our construction services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#service-areas" aria-label="See areas we serve in Saint Lucia">Areas</a></li>
-        <li class="nav-item"><a class="nav-link" href="#why-us" aria-label="Why clients choose Verdesirs">Why Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="#process" aria-label="See how our process works">Process</a></li>
-        <li class="nav-item"><a class="nav-link" href="#faq" aria-label="Frequently asked questions">FAQ</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about" aria-label="About Verdesirs Consulting Inc.">About</a></li>
-        <li class="nav-item ms-2">
-          <a class="nav-link nav-cta"
-             href="https://wa.me/17587151506?text=Hi%2C%20I%E2%80%99m%20interested%20in%20a%20construction%20project.%20Can%20I%20get%20a%20quote%3F"
-             target="_blank" rel="noopener noreferrer"
-             aria-label="Get a construction quote on WhatsApp">
-            <i class="fab fa-whatsapp me-1" aria-hidden="true"></i> Get a Quote
-          </a>
-        </li>
-      </ul>
-    </div>
   </div>
 </nav>
 </header>
